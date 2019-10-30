@@ -116,7 +116,7 @@ var metricas = function(id){
     </div>
   <div class="card text-center">
     <div class="card-header">
-      Crear Plan
+      Crear plan de mierda que no nos jala
     </div>
   </div>
 
