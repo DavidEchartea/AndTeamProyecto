@@ -26,8 +26,6 @@ else{
 $jsondata["success"] = false;
 $jsondata["data"]["mensaje"]="todo mal";
 $jsondata["data"]["pesoRec"] =88;
-//$jsondata["data"]["metricas"]=array();
-//$jsondata["data"]["metricas"][]=(0,0,0);
 }
 header('Content-type: application/json; charset=utf-8');
 echo json_encode($jsondata, JSON_FORCE_OBJECT);

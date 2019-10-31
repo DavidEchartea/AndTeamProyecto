@@ -3,6 +3,10 @@ function calcularPesos()
 	var estatura = document.getElementById('estatura').value;
 	var pesominimo = (parseFloat(estatura) * parseFloat(estatura)) * 20;
 	document.getElementById('estaturashw').value = pesominimo; 
+	var pesorec = (parseFloat(estatura) * parseFloat(estatura)) * 22;
+	document.getElementById('estaturashw2').value = pesorec;
+	var pesomax = (parseFloat(estatura) * parseFloat(estatura)) * 25;
+	document.getElementById('estaturashw3').value = pesomax;
 }
 function suma()
 {

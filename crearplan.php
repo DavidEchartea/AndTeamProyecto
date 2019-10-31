@@ -51,11 +51,11 @@
             {
               //alert(response.data.mensaje);
               $('#estatura').val(response.data.estatura);
-              alert(response.data.estatura)
+              //alert(response.data.estatura)
               $('#PesoRec').val(response.data.pesoRec);
               $('#PesoMax').val(response.data.pesoMax);
               $('#edad').val(response.data.edad);
-              alert(response.data.edad);
+              //alert(response.data.edad);
             }
           })
         .fail(function(jqXHR, textStatus, errorThrown)
@@ -156,10 +156,10 @@
       <input id='estaturashw' name='estaturashw' type='text' class='col-sm-2' disabled>
 
       <div class='input-group-text'>Peso Recomendado: </div>
-      <input id='PesoRec'type='text' class='col-sm-2'  disabled>
+      <input id='estaturashw2' name='estaturashw2'type='text' class='col-sm-2'  disabled>
 
       <div class='input-group-text'>Peso Maximo: </div>
-      <input id='PesoMax'type='text' class='col-sm-2'  disabled>
+      <input id='estaturashw3' name='estaturashw3'type='text' class='col-sm-2'  disabled>
 
       <input type='hidden' name='edad' id='edad' value='$edadJson'>
       <input type='hidden' name='estatura' id='estatura' value='$estaturaJson'>
