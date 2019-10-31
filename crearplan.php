@@ -237,6 +237,8 @@
       <div class="d-flex justify-content-center align-items-center container">
         <button type="button" name="btnCalculos" class="btn btn-secondary background letter" 
           onclick="suma();calgrasa();calcularPesos();">Calcular Medidas</button>
+        <button type="button" name="btnGuardar" class="btn btn-secondary background letter" 
+        onclick="javascript: grabar('medidas');">Guardar datos</button>  
       </div>
 
   <div class="my-3">
