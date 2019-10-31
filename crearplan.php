@@ -158,7 +158,7 @@
       </div>
 
       <div class="col-sm-2 my-2">
-        <input type="text" class="form-control" id="txtSuprailiaco" name="txtSuprailiaco"placeholder="Suprailiaco">
+        <input type="text" class="form-control" id="txtSupra" name="txtSupra"placeholder="Suprailiaco">
       </div>
 
       <div class="col-sm-2 my-2">
@@ -200,7 +200,7 @@
       </div>
         
         <div class="col-sm-2 my-2">
-          <input type="text" class="form-control" id="txtpesoGrasa"name="txtgrasaCorp" placeholder="Grasa Corporal">
+          <input type="text" class="form-control" id="txtgrasaCorp"name="txtgrasaCorp" placeholder="Grasa Corporal">
         </div>
         <div class="col-sm-2 my-2">
           
