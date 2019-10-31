@@ -1,3 +1,11 @@
+function calcularIMC(){
+	var peso = document.getElementById('txtPesoAct').value;
+	var estatura = document.getElementById('estatura').value;
+
+	var imc = (parseFloat(peso) / (parseFloat(estatura)*parseFloat(estatura)));
+	document.getElementById('txtIMC').value = imc;
+}
+
 function calcularPesos()
 {
 	var estatura = document.getElementById('estatura').value;
