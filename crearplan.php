@@ -163,7 +163,6 @@
 
       <input type='hidden' name='edad' id='edad' value='$edadJson'>
       <input type='hidden' name='estatura' id='estatura' value='$estaturaJson'>
-
       ";?>
     </div>
       <div class="d-flex justify-content-center align-items-center container ">
@@ -236,7 +235,7 @@
 
       <div class="d-flex justify-content-center align-items-center container">
         <button type="button" name="btnCalculos" class="btn btn-secondary background letter" 
-          onclick="suma();calgrasa();calcularPesos();">Calcular Medidas</button>
+          onclick="suma();calgrasa();calcularPesos();calcularIMC();">Calcular Medidas</button>
       </div>
 
   <div class="my-3">
