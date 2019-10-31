@@ -1,6 +1,7 @@
 <?php
   session_start();
-  if (empty($_SESSION['usr'])) {
+  if (empty($_SESSION['usr']))
+  {
     echo "Debe autentificarse!";
     exit();
   }
@@ -30,56 +31,67 @@
   <script type="text/javascript">
     $(document).ready(function()
     {
-      function alerta(mensaje){
+      function alerta(mensaje)
+      {
         alert(mensaje);
       }
 
-      var metricas = function(id){
+      var metricas = function(id)
+      {
       alert(id);
       return  $.getJSON("datosplan.php",{"id": id});
-    }
-      $('#cmb_plan').on('change',function(){
+      }
+      $('#cmb_plan').on('change',function()
+      {
         //alert(this.value);
         metricas(this.value)
-        .done(function(response){
-            if(response.success){
+        .done(function(response)
+        {
+            if(response.success)
+            {
               //alert(response.data.mensaje);
               $('#estatura').val(response.data.estatura);
               alert(response.data.estatura)
               $('#PesoRec').val(response.data.pesoRec);
               $('#PesoMax').val(response.data.pesoMax);
               $('#edad').val(response.data.edad);
-              //alert(response.data.edad);
+              alert(response.data.edad);
             }
           })
-        .fail(function(jqXHR, textStatus, errorThrown){
+        .fail(function(jqXHR, textStatus, errorThrown)
+        {
             alert(textStatus);
-         });
+        });
       });
     });
   </script>
 
 	<style type="text/css">
-	.sticky-footer
-	 {
-	 }
-  .navbar-dark .navbar-nav .nav-link{
+
+  .navbar-dark .navbar-nav .nav-link
+  {
     color: rgb(158,84,84);
   }
-  .img-container {
+  .img-container 
+  {
     text-align: center;
     background-color:#313534;
   }
-  .card > .card-header {
+  .card > .card-header 
+  {
     background: #333436; 
-    color: #F4F5F6; }
-  .background{
+    color: #F4F5F6; 
+  }
+  .background
+  {
     background-color: #9e5454;
   }
-  .letter{
+  .letter
+  {
     color: #ffffff;
   }
-  .label{
+  .label
+  {
     font-size: 15px;
     float: left;
   }label:after { content: " " }
@@ -106,11 +118,11 @@
 
   <div class="container-fluid">
     <div class="img-container">
-    <img src="./img/logo1.png">
+      <img src="./img/logo1.png">
     </div>
   <div class="card text-center">
     <div class="card-header">
-      Crear plan de mierda que no nos jala
+      Crear plan
     </div>
   </div>
 
@@ -119,7 +131,7 @@
       <div class="row">
         <div class="col my-2">
           <select id="cmb_plan" name="cmb_plan"  class="form-control">
-            <option selected value="0">Elige un puto</option>
+            <option selected value="0">Elige un cliente</option>
           <?php  
                 $estaturaJson = 0;
                 $PesoMax = 0;
@@ -139,14 +151,19 @@
     <?php
         echo"
       <div class='my-2 d-flex justify-content-center'>
+
       <div class='input-group-text'>Peso Minimo: </div>      
-      <input id='estatura' type='text' class='col-sm-2' disabled>
-       <div class='input-group-text'>Peso Recomendado: </div>
+      <input id='estaturashw' name='estaturashw' type='text' class='col-sm-2' disabled>
+
+      <div class='input-group-text'>Peso Recomendado: </div>
       <input id='PesoRec'type='text' class='col-sm-2'  disabled>
-       <div class='input-group-text'>Peso Maximo: </div>
+
+      <div class='input-group-text'>Peso Maximo: </div>
       <input id='PesoMax'type='text' class='col-sm-2'  disabled>
+
       <input type='hidden' name='edad' id='edad' value='$edadJson'>
-      <input type='hidden' name='tXtestatura' id='tXtestatura' value='$estaturaJson'>
+      <input type='hidden' name='estatura' id='estatura' value='$estaturaJson'>
+
       ";?>
     </div>
       <div class="d-flex justify-content-center align-items-center container ">

@@ -1,9 +1,11 @@
-function calcularPesos(){
-	var estatura = document.getElementById('tXtestatura').value;
+function calcularPesos()
+{
+	var estatura = document.getElementById('estatura').value;
 	var pesominimo = (parseFloat(estatura) * parseFloat(estatura)) * 20;
-	document.getElementById('estatura').value = pesominimo; 
+	document.getElementById('estaturashw').value = pesominimo; 
 }
-function suma(){
+function suma()
+{
 	var txtBiceptal = document.getElementById('txtBiceptal').value;
 	var txtTriceptal = document.getElementById('txtTriceptal').value;
 	var txtSuprailico = document.getElementById('txtSupra').value;
@@ -11,7 +13,7 @@ function suma(){
 	var pliegue = parseInt(txtBiceptal) + parseInt(txtTriceptal) + parseInt(txtSuprailico) + parseInt(txtsubEscapular);
 	document.getElementById('resultadoPliegues').value = pliegue;
 	return pliegue;
-	}
+}
 
 function calgrasa()
 {
