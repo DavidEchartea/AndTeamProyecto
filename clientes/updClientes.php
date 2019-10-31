@@ -83,14 +83,6 @@ session_start();
     }
     
 
-    .footerp
-    {
-      bottom:0; !important
-      position: fixed; !important
-      text-align: center;
-      width: 100%;
-    }
-
     </style>
   </head>
   <body>
@@ -119,65 +111,80 @@ session_start();
     <form  name='frmUpdPaciente' id='frmUpdPaciente' action='./qryclientes.php' method='POST'>
 
 <div class='container-fluid'> <!--CONTAINER--> 
-      
 
   <div class='d-flex justify-content-center align-items-center container '> <!--DIV FORM-->
   
-  <div class='col'> <!--DIV COL--> 
-    <div class='form-group'>
-      <input type='hidden' id='txtOpc'class='form-control' name='txtOpc' placeholder='id'>
-    </div>
-    <div class='form-group'>
-      <label>Nombre(s):</label>
-      <input type='text' class='form-control' name='txtNombre' id='txtNombre' value='$nombre_paciente' disabled>
-    </div>
-    <div class='form-group'>
-    <input type='text' id='txtAPaterno' name='txtAPaterno'class='form-control'>
-    </div>
-    <div class='form-group'>
-    <input type='text' id='txtAMaterno' name='txtAMaterno'class='form-control'>
-    </div>
-    <div class=form-group'>
-    <input type='text' id='txtCorreo' name='txtCorreo'class='form-control'>
-    </div>
-    <div class='form-group'>
-    <input type='text' id='txtObjetivo' name='txtObjetivo'class='form-control'>
-    </div>
-  </div> <!--DIV COL--> 
+    <div class='col'> <!--DIV COL--> 
+
+      <div class='form-group'>
+        <input type='hidden' id='txtOpc'class='form-control' name='txtOpc' placeholder='id'>
+      </div>
+
+      <div class='form-group'>
+        <label>Nombre(s):</label>
+        <input type='text' class='form-control' name='txtNombre' id='txtNombre' value='$nombre_paciente' disabled>
+      </div>
+
+      <div class='form-group'>
+        <label>Apellido Paterno:</label>
+        <input type='text' class='form-control' name='txtAPaterno' id='txtAPaterno' value='$apellido_pat' disabled>
+      </div>
+
+      <div class='form-group'>
+        <label>Apellido Materno:</label>
+        <input type='text' class='form-control' name='txtAMaterno' id='txtAMaterno' value='$apellido_mat' disabled>
+      </div>
+
+      <div class='form-group'>
+        <label>Correo:</label>
+        <input type='text' class='form-control' name='txtCorreo' id='txtCorreo' value='$correo'>
+      </div>
+
+      <div class='form-group'>
+        <label>Objetivo:</label>
+        <input type='text' class='form-control' name='txtObjetivo' id='txtObjetivo' value='$objetivo'>
+      </div>
+
+    </div> <!--DIV COL--> 
 
   <div class='col'>
-      <div class='form-group'>
-      </div>
-      <div class='form-group'>
-      <input type'text' id='txtEdad' name='txtEdad'class='form-control'>
-      </div>
-      <div class='form-group'>
-      <input type='text' id='txtEstatura' name='txtEstatura'class='form-control'>
-      </div>
-      <div class='form-group'>
-      <input type='text' id='txtPeso' name='txtPeso'class='form-control' >
-      </div>
-      <div class='form-group'>
-      <input type='text' id='txtTelefono' name='txtTelefono'class='form-control'>
-      </div>
+    <div class='form-group'>
+      <label>Edad:</label>
+      <input type='text' class='form-control' name='txtEdad' id='txtEdad' value='$edad'>
     </div>
+
+      <div class='form-group'>
+        <label>Estatura:</label>
+        <input type='text' class='form-control' name='txtEstatura' id='txtEstatura' value='$estatura'>
+      </div>
+
+      <div class='form-group'>
+        <label>Peso Inicial:</label>
+        <input type='text' class='form-control' name='txtPesoInicial' id='txtPesoInicial' value='$pesoIni' disabled>
+      </div>
+
+      <div class='form-group'>
+        <label>Telefono:</label>
+        <input type='text' class='form-control' name='txtTelefono' id='txtTelefono' value='$telefono'>
+      </div>
+
+  </div>
 
   </div> <!--DIV FORM-->
 
   </form>  
 </div> <!--CONTAINER--> 
-<div class='card text-center'> <!--DIV BOTONES-->
-      <div class='card-header'>
-
+  <div class='card text-center'> <!--DIV BOTONES-->
+    <div class='card-header'>
       <input type='hidden' name='txtOpc' id='txtOpc'>
       <input type='hidden' name='txtId' id='txtId'>
 
       <button type='button' id='btnGuardar' name='btnGuardar' class='btn btn-secondary float-center background letter' onClick='enviar(\"upd\")'> Guardar Cambios </button>
       <button type='button' class='btn btn-secondary  float-center background letter' onClick='enviar(\"regresar\")'>Volver al menu</button>
-      </div>
-      </div> <!--DIV BOTONES-->
+    </div>
+  </div> <!--DIV BOTONES-->
   
-  <footer class='py-4 bg-dark text-white-50 footerp'>
+  <footer class='py-4 bg-dark text-white-50'>
       <div class='container text-center'>
         <a>Attitude Nutrition Discipline Team</a>
       </div>
