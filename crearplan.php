@@ -5,7 +5,7 @@
     exit();
   }
   include './bd/conexion.php';
-  $qryC='SELECT concat(nombre_paciente," ",apellido_pat," ",apellido_mat) AS nombre_paciente,edad,idPaciente FROM paciente order by nombre_paciente ASC';
+  $qryC='SELECT concat(nombre_paciente," ",apellido_pat," ",apellido_mat) AS nombre_paciente,idPaciente FROM paciente order by nombre_paciente ASC';
   $tablaBD= mysqli_query($link,$qryC);
   $qryProte='SELECT nombre_nutri FROM proteinas order by nombre_nutri ASC';
   $qryCarbs='SELECT `nombre_carbs` FROM `carbos` ORDER BY nombre_carbs ASC';
@@ -19,9 +19,6 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title>Crear Plan</title>
-	<link rel="stylesheet"  href="estilos.css">
-
-	<link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -31,17 +28,13 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
   <script type="text/javascript">
-    
-
-    $(document).ready(function(){
-
-
+    $(document).ready(function()
+    {
       function alerta(mensaje){
         alert(mensaje);
       }
 
-
-var metricas = function(id){
+      var metricas = function(id){
       alert(id);
       return  $.getJSON("datosplan.php",{"id": id});
     }
@@ -49,17 +42,17 @@ var metricas = function(id){
         //alert(this.value);
         metricas(this.value)
         .done(function(response){
-            //alert("csiovsoidvjoisdvj");
             if(response.success){
               //alert(response.data.mensaje);
               $('#PesoMinimo').val(response.data.pesoMinimo);
               $('#PesoRec').val(response.data.pesoRec);
               $('#PesoMax').val(response.data.pesoMax);
+              $('#edad').val(response.data.edad);
+              //alert(response.data.edad);
             }
           })
         .fail(function(jqXHR, textStatus, errorThrown){
             alert(textStatus);
-            
          });
       });
     });
@@ -120,7 +113,7 @@ var metricas = function(id){
     </div>
   </div>
 
-<form id='frmPlan'  method='POST'> 
+<form id='frmPlan' > 
     <div class="d-flex justify-content-center align-items-center container ">
       <div class="row">
         <div class="col my-2">
@@ -130,38 +123,14 @@ var metricas = function(id){
                 $PesoMinimo = 0;
                 $PesoMax = 0;
                 $PesoRec = 0; 
+                $edadJson =10;
                 
               while ($registro = mysqli_fetch_array($tablaBD)) {
-              
               echo "<option value='".$registro['idPaciente']."' >";  
               echo $registro['nombre_paciente'];
               echo"</option>";
               }
-                
-              
-              ?> 
-            <?php  
-              /*error_reporting(E_ALL ^ E_NOTICE);
-              while ($registro = mysqli_fetch_array($tablaBD)) {
-                $estatura = $_GET['estatura'];
-
-              echo "<option value='".$registro['idPaciente']."' "; 
-              if($_POST['cmb_plan']==$registro['idPaciente'])    
-              echo "Selected";
-              echo ">";
-              echo $registro['nombre_paciente'];
-              echo"</option>";
-              }
-                
-                $PesoMinimo = $estatura['estatura'];
-                $PesoMax = $_POST['cmb_plan'];
-                $PesoRec = $_POST['cmb_plan']; 
-                
-                $PesoMinimo = (($PesoMinimo * $PesoMinimo) * 20);
-                $PesoRec = (($PesoRec * $PesoRec) * 22);
-                $PesoMax = (($PesoMax * $PesoMax) * 25);  */
-              ?>  
-                  
+          ?>       
           </select>
         </div>
       </div>
@@ -175,14 +144,14 @@ var metricas = function(id){
       <input id='PesoRec'type='text' class='col-sm-2' value='$PesoRec' disabled>
        <div class='input-group-text'>Peso Maximo: </div>
       <input id='PesoMax'type='text' class='col-sm-2' value='$PesoMax' disabled>
+      <input type='text' name='edad' id='edad' value='$edadJson'>
       ";?>
     </div>
       <div class="d-flex justify-content-center align-items-center container ">
-      <input type='hidden' id='txtOpc' name='txtOpc' value='add'>
-      <input type="hidden" name="edad" id="edad">
       <div class="row">
       <div class="col-sm-2 my-2">
-        <input type="text" class="form-control" id="txtBiceptal" name="txtBiceptal" placeholder="Biceptal">
+        <input type="text" name="" id="resultadoPliegues">
+        <input type="text" class="form-control" id="txtBiceptal" name="txtBiceptal" placeholder="Biceptal" required>
       </div>
       <div class="col-sm-2 my-2">
         <input type="text" class="form-control" id="txtTriceptal" name="txtTriceptal" placeholder="Triceptal">
@@ -198,7 +167,6 @@ var metricas = function(id){
       <div class="col-sm-2 my-2">
         <input type="text" class="form-control" id="txtAbdominal" name="txtAbdominal"placeholder="Abdominal">
       </div>
-
       <div class="col-sm-2 my-2">
           <input type="text" class="form-control" id="txtCuadriciptal" name="txtCuadriciptal"placeholder="Cuadriciptal">
       </div>    
@@ -232,7 +200,7 @@ var metricas = function(id){
       </div>
         
         <div class="col-sm-2 my-2">
-          <input type="text" class="form-control" id="txtgrasaCorp"name="txtgrasaCorp" placeholder="Grasa Corporal">
+          <input type="text" class="form-control" id="txtpesoGrasa"name="txtgrasaCorp" placeholder="Grasa Corporal">
         </div>
         <div class="col-sm-2 my-2">
           
@@ -249,7 +217,7 @@ var metricas = function(id){
 
       <div class="d-flex justify-content-center align-items-center container">
         <button type="button" name="btnCalculos" class="btn btn-secondary background letter" 
-          onclick="">Calcular Medidas</button>
+          onclick="suma();calgrasa();">Calcular Medidas</button>
       </div>
 
   <div class="my-3">
@@ -375,4 +343,5 @@ var metricas = function(id){
     </footer>
 </body>
 <script type='text/javascript' src='./js/funciones.js'></script>
+<script src='./js/calculos.js'></script>
 </html>
