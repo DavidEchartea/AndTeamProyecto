@@ -116,9 +116,9 @@ function grabar(opc){
 				document.getElementById("txtTriceptal").focus();
 				return false;
 			}
-			if (document.getElementById("txtSuprailiaco").value == '') {
+			if (document.getElementById("txtSupra").value == '') {
 				alert('Error en los datos reviselos!');
-				document.getElementById("txtSuprailiaco").focus();
+				document.getElementById("txtSupra").focus();
 				return false;
 			}
 			if (document.getElementById("txtsubEscapular").value == '') {
