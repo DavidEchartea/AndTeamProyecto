@@ -1,3 +1,8 @@
+function calcularPesos(){
+	var estatura = document.getElementById('tXtestatura').value;
+	var pesominimo = (parseFloat(estatura) * parseFloat(estatura)) * 20;
+	document.getElementById('estatura').value = pesominimo; 
+}
 function suma(){
 	var txtBiceptal = document.getElementById('txtBiceptal').value;
 	var txtTriceptal = document.getElementById('txtTriceptal').value;

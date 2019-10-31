@@ -8,14 +8,14 @@ $result= mysqli_query($link,$qryEst);
 //verificar si el resultado es algo
 while ( $row = mysqli_fetch_array($result)){
 //aqui hago la consulta
-$PesMinimo =$row['estatura'];
+$estaturaJson =$row['estatura'];
 $edadJson	=$row['edad'];
 $PesRec	=$row['peso'];
 $PesMax = $row['idPaciente'];
 }
 $jsondata["success"] = true;
 $jsondata["data"]["mensaje"]="todo bien";
-$jsondata["data"]["pesoMinimo"]= $PesMinimo;
+$jsondata["data"]["estatura"]= $estaturaJson;
 $jsondata["data"]["pesoRec"]= $PesRec;
 $jsondata["data"]["pesoMax"]= $PesMax;
 $jsondata["data"]["edad"]=$edadJson;

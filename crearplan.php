@@ -44,7 +44,8 @@
         .done(function(response){
             if(response.success){
               //alert(response.data.mensaje);
-              $('#PesoMinimo').val(response.data.pesoMinimo);
+              $('#estatura').val(response.data.estatura);
+              alert(response.data.estatura)
               $('#PesoRec').val(response.data.pesoRec);
               $('#PesoMax').val(response.data.pesoMax);
               $('#edad').val(response.data.edad);
@@ -120,10 +121,10 @@
           <select id="cmb_plan" name="cmb_plan"  class="form-control">
             <option selected value="0">Elige un puto</option>
           <?php  
-                $PesoMinimo = 0;
+                $estaturaJson = 0;
                 $PesoMax = 0;
                 $PesoRec = 0; 
-                $edadJson =10;
+                $edadJson =0;
                 
               while ($registro = mysqli_fetch_array($tablaBD)) {
               echo "<option value='".$registro['idPaciente']."' >";  
@@ -139,18 +140,19 @@
         echo"
       <div class='my-2 d-flex justify-content-center'>
       <div class='input-group-text'>Peso Minimo: </div>      
-      <input id='PesoMinimo' type='text' class='col-sm-2' value='$PesoMinimo' disabled>
+      <input id='estatura' type='text' class='col-sm-2' disabled>
        <div class='input-group-text'>Peso Recomendado: </div>
-      <input id='PesoRec'type='text' class='col-sm-2' value='$PesoRec' disabled>
+      <input id='PesoRec'type='text' class='col-sm-2'  disabled>
        <div class='input-group-text'>Peso Maximo: </div>
-      <input id='PesoMax'type='text' class='col-sm-2' value='$PesoMax' disabled>
-      <input type='text' name='edad' id='edad' value='$edadJson'>
+      <input id='PesoMax'type='text' class='col-sm-2'  disabled>
+      <input type='hidden' name='edad' id='edad' value='$edadJson'>
+      <input type='hidden' name='tXtestatura' id='tXtestatura' value='$estaturaJson'>
       ";?>
     </div>
       <div class="d-flex justify-content-center align-items-center container ">
       <div class="row">
       <div class="col-sm-2 my-2">
-        <input type="text" name="" id="resultadoPliegues">
+        <input type="hidden" name="" id="resultadoPliegues">
         <input type="text" class="form-control" id="txtBiceptal" name="txtBiceptal" placeholder="Biceptal" required>
       </div>
       <div class="col-sm-2 my-2">
@@ -217,7 +219,7 @@
 
       <div class="d-flex justify-content-center align-items-center container">
         <button type="button" name="btnCalculos" class="btn btn-secondary background letter" 
-          onclick="suma();calgrasa();">Calcular Medidas</button>
+          onclick="suma();calgrasa();calcularPesos();">Calcular Medidas</button>
       </div>
 
   <div class="my-3">
