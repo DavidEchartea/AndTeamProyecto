@@ -1,16 +1,16 @@
 function suma(){
-	var biceptal = document.getElementById('Biceptal').value;
-	var triceptal = document.getElementById('Triceptal').value;
-	var supra = document.getElementById('Suprailico').value;
-	var subEsc = document.getElementById('subEsc').value;
+	var biceptal = document.getElementById('txtBiceptal').value;
+	var triceptal = document.getElementById('txtTriceptal').value;
+	var supra = document.getElementById('txtSuprailico').value;
+	var subEsc = document.getElementById('txtsubEscapular').value;
 	var pliegue = parseInt(biceptal) + parseInt(triceptal) + parseInt(supra) + parseInt(subEsc);
-	document.getElementById('resultado').value = pliegue;
+	document.getElementById('resultadoPliegues').value = pliegue;
 	return pliegue;
 	}
 
 function calgrasa()
 {
-	var pliegues = document.getElementById('resultado').value;
+	var pliegues = document.getElementById('resultadoPliegues').value;
 	var txtedad = document.getElementById('edad').value;
 	var edad = parseInt(txtedad);
 	 switch(pliegues)
@@ -20,12 +20,12 @@ function calgrasa()
 	 	if (edad > 16 && edad < 30)
 	 	{
 	 		var grasa = 4.8;
-	 		document.getElementById('grasa').value = grasa;
+	 		document.getElementById('txtpesoGrasa').value = grasa;
 	 	}
 
 	 	else
 	 	{
-	 		alert("Datos Invalidos");
+			 alert("Datos Invalidos, intente de nuevo!");
 	 	}
 
 	 	break;
@@ -36,6 +36,55 @@ function calgrasa()
 
 	 	case "25":
 	 	alert("Caso 25");
-	 	break;
+		break;
+		 
+		case "30":
+		alert("Caso 30");
+		break;
+			
+		case "35":
+	 	alert("Caso 35");
+		 break;
+		 
+		case "40":
+		alert("Caso 40");
+		break;
+
+		case"45":
+		alert("Caso 45");
+		break;
+
+		case "50":
+		break;
+
+		case "55":
+		break;
+
+		case "60":
+		break;
+
+		case "65":
+		break;
+
+		case "70":
+		break;
+
+		case "75":
+		break;
+
+		case "80":
+		break;
+
+		case "85":
+		break;
+
+		case "90":
+		break;
+
+		case "95":
+		break;
+
+		case "100":
+		break;
 	 }
 }
