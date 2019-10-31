@@ -10,11 +10,11 @@ function calcularPesos()
 {
 	var estatura = document.getElementById('estatura').value;
 	var pesominimo = (parseFloat(estatura) * parseFloat(estatura)) * 20;
-	document.getElementById('estaturashw').value = pesominimo; 
+	document.getElementById('estaturashw').value = pesominimo.toFixed(2); 
 	var pesorec = (parseFloat(estatura) * parseFloat(estatura)) * 22;
-	document.getElementById('estaturashw2').value = pesorec;
+	document.getElementById('estaturashw2').value = pesorec.toFixed(2);
 	var pesomax = (parseFloat(estatura) * parseFloat(estatura)) * 25;
-	document.getElementById('estaturashw3').value = pesomax;
+	document.getElementById('estaturashw3').value = pesomax.toFixed(2);
 }
 function suma()
 {
