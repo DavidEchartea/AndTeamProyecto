@@ -1,7 +1,16 @@
+function catchyMc(){
+	var pecho = document.getElementById('txtPectoral').value;
+	var abs = document.getElementById('txtAbdominal').value;
+	var cuadricep = document.getElementById('txtCuadriciptal').value;
+	var edad = document.getElementById('edad').value;
+	var suma = parseInt(pecho) + parseInt(abs) + parseInt(cuadricep);
+	var densidad  = ((0.0008267 * parseInt(suma)) + (0.0000016 * parseInt(edad)) - (0.0002574 * parseInt(edad)));
+	var porcentajeGrasa = (495 / parseFloat(densidad) - 450);
+	document.getElementById('txtCatch').vale = porcentajeGrasa.toFixed(4);
+}
 function calcularIMC(){
 	var peso = document.getElementById('txtPesoAct').value;
 	var estatura = document.getElementById('estatura').value;
-
 	var imc = (parseFloat(peso) / (parseFloat(estatura)*parseFloat(estatura)));
 	document.getElementById('txtIMC').value = imc.toFixed(2);
 }
