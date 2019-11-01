@@ -184,7 +184,7 @@
   <div class='my-3 d-flex justify-content-center'>
 
     <div class='input-group-text'>Pectoral: </div>      
-    <input type="text" class="col-sm-2" id="txtPectoral"name="txtPectoral" placeholder="Pectoral" required >
+    <input type="text" class="form-control" id="txtPectoral"name="txtPectoral" placeholder="Pectoral" required >
 
     <div class='input-group-text'>Abdominal: </div>   
     <input type="text" class="form-control" id="txtAbdominal" name="txtAbdominal"placeholder="Abdominal" required>
@@ -193,7 +193,7 @@
     <input type="text" class="form-control" id="txtCuadriciptal" name="txtCuadriciptal"placeholder="Cuadriciptal" required>
 
     <div class='input-group-text'>Peso Actual: </div>
-    <input type="text" class="col-sm-2" id="txtPesoAct" name="txtPesoAct"placeholder="Peso Actual" required>
+    <input type="text" class="form-control" id="txtPesoAct" name="txtPesoAct"placeholder="Peso Actual" required>
 
   </div>
 
