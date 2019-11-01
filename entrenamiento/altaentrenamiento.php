@@ -60,7 +60,7 @@
       	<a class="nav-item nav-link" href="../clientes/altacliente.php">Alta cliente</a>
       	<a class="nav-item nav-link" href="../crearplan.php">Crear plan</a>
       	<a class="nav-item nav-link" href="../expediente/expediente.php">Expediente</a>
-        <a class="nav-item nav-link" href="../entrenamiento/altaentrenamiento.php">Entrenamiento</a>
+        <a class="nav-item nav-link active" href="../entrenamiento/altaentrenamiento.php">Entrenamiento</a>
     	</div>
  	</div>
 	</nav>
