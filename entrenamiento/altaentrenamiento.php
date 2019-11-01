@@ -60,14 +60,10 @@
       	<a class="nav-item nav-link" href="../clientes/altacliente.php">Alta cliente</a>
       	<a class="nav-item nav-link" href="../crearplan.php">Crear plan</a>
       	<a class="nav-item nav-link" href="../expediente/expediente.php">Expediente</a>
-        <a class="nav-item nav-link" href="../entrenamiento/altaentrenamiento.php">Entrenamiento</a>
+        <a class="nav-item nav-link active" href="../entrenamiento/altaentrenamiento.php">Entrenamiento</a>
     	</div>
  	</div>
 	</nav>
-
-  <form id='frmEntrenamiento' action='./qryEntrenamiento.php' method="POST">
-
-  <div class="container-fluid">
   <div class="img-container">
     <img src="../img/logo1.png">
   </div>
@@ -76,6 +72,10 @@
       Entrenamiento Mode Beast
     </div>
   </div>
+  <form id='frmEntrenamiento' action='./qryEntrenamiento.php' method="POST">
+
+  <div class="container-fluid">
+
   <div class="container">
     <div class="form-row">
     <div class="col my-2">
@@ -167,15 +167,15 @@
   </div>
   </div>
 
-  
 
-    <div class="card text-center">
+  </div>
+
+  <div class="card text-center">
     <div class="card-header">
     <button type="button" class="btn btn-secondary  float-left background letter" href="../menu.html">Volver al menu</button>
     <button type="button" class="btn btn-secondary  float-center background letter" href="#">Guardar</button>
     </div>
     </div>
-  </div>
 
 <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
     <div class="container text-center">

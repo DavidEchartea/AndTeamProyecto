@@ -69,40 +69,39 @@ session_start();
       background-color:#313534;
     } 
 
-  .card > .card-header
-   {
-    background: #333436; color: #F4F5F6; 
-   }
-  sticky-footer{
-  flex-shrink: none;
-  }
-
-    .centrarCaja{
-    position :relative !important; 
-    left: 39% !important;
-}
+    .card > .card-header
+    {
+      background: #333436; color: #F4F5F6; 
+    }
+    .background
+    {
+      background-color: #9e5454;
+    }
+    .letter
+    {
+      color: #ffffff;
+    }
+    
 
     </style>
   </head>
   <body>
   <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
       <a class='navbar-brand' href='./menu.html'>
-        <img src='./img/pesas.png' width='65' height='50'>
+        <img src='../img/pesas.png' width='65' height='50'>
       </a>
       
     
   <div class='collapse navbar-collapse' id='navbarNavAltMarkup'>
       <div class='navbar-nav'>
-        <a class='nav-item nav-link' href='./altacliente.php'>Alta cliente</a>
-        <a class='nav-item nav-link' href='#'>Crear plan</a>
-        <a class='nav-item nav-link active' href='#''>Expediente</a>
+        <a class='nav-item nav-link active' href='../clientes/altacliente.php'>Alta cliente</a>
+        <a class='nav-item nav-link' href='../crearplan.php'>Crear plan</a>
+        <a class='nav-item nav-link' href='../expediente/expediente.php'>Expediente</a>
+        <a class='nav-item nav-link' href='../entrenamiento/altaentrenamiento.php'>Entrenamiento</a>
       </div>
   </div>
   </nav>
-    <form  name='frmUpdPaciente' id='frmUpdPaciente' action='./qryclientes.php' method='POST'>
-
-    <div class='container-fluid'>
-      <div class='img-container'>
+  <div class='img-container'>
         <img src='../img/logo1.png'>
       </div>
       <div class='card text-center'>
@@ -110,93 +109,87 @@ session_start();
         Modificando Clientes
         </div>
       </div>
+    <form  name='frmUpdPaciente' id='frmUpdPaciente' action='./qryclientes.php' method='POST'>
 
-  <div class='centrarCaja'>
+<div class='container-fluid'> <!--CONTAINER--> 
 
-  <div class='row'>
-    <div class='col'>
-      <label>Nombre(s):</label>
-      <input type='text' class='form-control col-sm-2' name='txtNombre' id='txtNombre' value='$nombre_paciente' disabled>
-    </div>
-  </div>
+  <div class='d-flex justify-content-center align-items-center container '> <!--DIV FORM-->
+  
+    <div class='col'> <!--DIV COL--> 
 
-  <div class='row'>
-    <div class='col'>
-      <label>Apellido Paterno:</label>
-      <input type='text' class='form-control col-sm-2' name='txtAPaterno' id='txtAPaterno' value='$apellido_pat' disabled>
-    </div>
-  </div>
+      <div class='form-group'>
+        <input type='hidden' id='txtOpc'class='form-control' name='txtOpc' placeholder='id'>
+      </div>
 
-  <div class='row'>
-    <div class='col'>
-      <label>Apellido Materno:</label>
-      <input type='text' class='form-control col-sm-2' name='txtAMaterno' id='txtAMaterno' value='$apellido_mat' disabled>
-    </div>
-  </div>
+      <div class='form-group'>
+        <label>Nombre(s):</label>
+        <input type='text' class='form-control' name='txtNombre' id='txtNombre' value='$nombre_paciente' disabled>
+      </div>
 
-  <div class='row'>
-    <div class='col'>
-      <label>Correo:</label>
-      <input type='text' class='form-control col-sm-2' name='txtCorreo' id='txtCorreo' value='$correo'>
-    </div>
-  </div>
+      <div class='form-group'>
+        <label>Apellido Paterno:</label>
+        <input type='text' class='form-control' name='txtAPaterno' id='txtAPaterno' value='$apellido_pat' disabled>
+      </div>
 
-  <div class='row'>
-    <div class='col'>
+      <div class='form-group'>
+        <label>Apellido Materno:</label>
+        <input type='text' class='form-control' name='txtAMaterno' id='txtAMaterno' value='$apellido_mat' disabled>
+      </div>
+
+      <div class='form-group'>
+        <label>Correo:</label>
+        <input type='text' class='form-control' name='txtCorreo' id='txtCorreo' value='$correo'>
+      </div>
+
+      <div class='form-group'>
+        <label>Objetivo:</label>
+        <input type='text' class='form-control' name='txtObjetivo' id='txtObjetivo' value='$objetivo'>
+      </div>
+
+    </div> <!--DIV COL--> 
+
+  <div class='col'>
+    <div class='form-group'>
       <label>Edad:</label>
-      <input type='text' class='form-control col-sm-2' name='txtEdad' id='txtEdad' value='$edad'>
+      <input type='text' class='form-control' name='txtEdad' id='txtEdad' value='$edad'>
     </div>
+
+      <div class='form-group'>
+        <label>Estatura:</label>
+        <input type='text' class='form-control' name='txtEstatura' id='txtEstatura' value='$estatura'>
+      </div>
+
+      <div class='form-group'>
+        <label>Peso Inicial:</label>
+        <input type='text' class='form-control' name='txtPesoInicial' id='txtPesoInicial' value='$pesoIni' disabled>
+      </div>
+
+      <div class='form-group'>
+        <label>Telefono:</label>
+        <input type='text' class='form-control' name='txtTelefono' id='txtTelefono' value='$telefono'>
+      </div>
+
   </div>
 
-  <div class='row'>
-    <div class='col'>
-      <label>Estatura:</label>
-      <input type='text' class='form-control col-sm-2' name='txtEstatura' id='txtEstatura' value='$estatura'>
-    </div>
-  </div>
+  </div> <!--DIV FORM-->
 
-  <div class='row'>
-    <div class='col'>
-      <label>Telefono:</label>
-      <input type='text' class='form-control col-sm-2' name='txtTelefono' id='txtTelefono' value='$telefono'>
-    </div>
-  </div>
-
-  <div class='row'>
-    <div class='col'>
-      <label>Peso Inicial:</label>
-      <input type='text' class='form-control col-sm-2' name='txtPesoInicial' id='txtPesoInicial' value='$pesoIni' disabled>
-    </div>
-  </div>
-
-  <div class='row'>
-    <div class='col'>
-      <label>Objetivo:</label>
-      <input type='text' class='form-control col-sm-2' name='txtObjetivo' id='txtObjetivo' value='$objetivo'>
-    </div>
-  </div>
-
-
-</div>
-
-      <div class='card text-center'>
-      <div class='card-header'>
-
+  </form>  
+</div> <!--CONTAINER--> 
+  <div class='card text-center'> <!--DIV BOTONES-->
+    <div class='card-header'>
       <input type='hidden' name='txtOpc' id='txtOpc'>
       <input type='hidden' name='txtId' id='txtId'>
 
       <button type='button' id='btnGuardar' name='btnGuardar' class='btn btn-secondary float-center background letter' onClick='enviar(\"upd\")'> Guardar Cambios </button>
       <button type='button' class='btn btn-secondary  float-center background letter' onClick='enviar(\"regresar\")'>Volver al menu</button>
-      </div>
     </div>
-
-    </div>  
-  </form>
+  </div> <!--DIV BOTONES-->
+  
   <footer class='py-4 bg-dark text-white-50'>
       <div class='container text-center'>
         <a>Attitude Nutrition Discipline Team</a>
       </div>
-      </footer>
+  </footer>
   </body>
   <script type='text/javascript' src='http://services.iperfect.net/js/IP_generalLib.js'></script>
   </html>

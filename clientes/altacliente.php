@@ -82,10 +82,6 @@
       </div>
   </div>
   </nav>
-
-<form id='frmAltaClientes' action='./qryclientes.php' method="POST">
-
-  <div class="container-fluid">
   <div class="img-container">
     <img src="../img/logo1.png">
   </div>
@@ -94,6 +90,10 @@
       Alta Clientes
     </div>
   </div>
+<form id='frmAltaClientes' action='./qryclientes.php' method="POST">
+
+  <div class="container-fluid">
+  
 
   <div class="row">
 
@@ -183,15 +183,13 @@
         </div>
       </div>
     </div>
-
+    </div><!--Container-->
     <div class="card text-center">
       <div class="card-header">
       <button type="button" name="btnAgregar" class="btn btn-secondary  background letter" onclick="javascript: grabar('clientes')"> Agregar </button>
       <button type="button" class="btn btn-secondary  float-left background letter" href="./menu.html">Volver al menu</button>
       </div>
     </div>
-    </div><!--Container-->
-
   </form>
       <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
       <div class="container text-center">

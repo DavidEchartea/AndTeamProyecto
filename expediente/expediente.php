@@ -54,15 +54,11 @@
     	<div class="navbar-nav">
       	<a class="nav-item nav-link" href="../clientes/altacliente.php">Alta cliente</a>
       	<a class="nav-item nav-link" href="../crearplan.php">Crear plan</a>
-      	<a class="nav-item nav-link" href="../expediente/expediente.php">Expediente</a>
+      	<a class="nav-item nav-link active" href="../expediente/expediente.php">Expediente</a>
         <a class="nav-item nav-link" href="../entrenamiento/altaentrenamiento.php">Entrenamiento</a>
     	</div>
  	</div>
 	</nav>
-
-  <form id='frmExpediente' action='./qryExpediente.php' method="POST">
-
-  <div class="container-fluid">
   <div class="img-container">
     <img src="../img/logo1.png">
   </div>
@@ -71,6 +67,9 @@
       Historial 
     </div>
   </div>
+  <form id='frmExpediente' action='./qryExpediente.php' method="POST">
+
+  <div class="container-fluid">
 
   <div class="row">
     <div class="col">
@@ -108,13 +107,12 @@
     </div>
 
     </div> <!--ROW-->
-    <div class="card text-center">
+  </div>
+  <div class="card text-center">
     <div class="card-header">
     <button type="button" class="btn btn-secondary  float-center background letter" href="./menu.html">Volver al menu</button>
     </div>
     </div>
-  </div>
-
 <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
     <div class="container text-center">
       <small>Attitude Nutrition Discipline Team</small>

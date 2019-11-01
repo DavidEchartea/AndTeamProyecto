@@ -115,9 +115,7 @@
   	</div>
  	</div>
 	</nav>
-
-  <div class="container-fluid">
-    <div class="img-container">
+   <div class="img-container">
       <img src="./img/logo1.png">
     </div>
   <div class="card text-center">
@@ -125,6 +123,8 @@
       Crear plan
     </div>
   </div>
+  <div class="container-fluid">
+  
 
 <form id='frmPlan' > 
     <div class="d-flex justify-content-center align-items-center container ">
@@ -344,12 +344,14 @@
   </div>
 
   <div class="my-2">
-    <div class="card-header d-flex justify-content-center">
+  <div class="card text-center">
+    <div class="card-header">
       Suplementos a manejar
+    </div>
   </div>
     <div class="row">
       <div class="col">
-      <textarea id="txtSuplementos" class="form-control"></textarea>
+      <textarea id="txtSuplementos" rows="3" class="form-control" placeholder="Ingrese suplementos aqui..."></textarea>
       </div>
     </div>
     
