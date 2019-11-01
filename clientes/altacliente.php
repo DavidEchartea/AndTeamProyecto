@@ -102,18 +102,23 @@
         <input type='hidden' id="txtOpc"class="form-control" name="txtOpc" placeholder="id">
       </div>
       <div class="form-group">
+        <label>Nombre:</label>
         <input type="text" id="txtNombre" name="txtNombre"class="form-control" placeholder="Nombre(s)">
       </div>
       <div class="form-group">
+      <label>Apellido Paterno:</label>
       <input type="text" id="txtAPaterno" name="txtAPaterno"class="form-control" placeholder="Apellido Paterno">
       </div>
       <div class="form-group">
+      <label>Apellido Materno:</label>
       <input type="text" id="txtAMaterno" name="txtAMaterno"class="form-control" placeholder="Apellido Materno">
       </div>
       <div class="form-group">
+      <label>Correo:</label>
       <input type="text" id="txtCorreo" name="txtCorreo"class="form-control" placeholder="Correo">
       </div>
       <div class="form-group">
+      <label>Objetivo:</label>
       <input type="text" id="txtObjetivo" name="txtObjetivo"class="form-control" placeholder="Objetivo">
       </div>
     </div>
@@ -122,16 +127,24 @@
       <div class="form-group">
       </div>
       <div class="form-group">
+      <label>Edad:</label>
       <input type="text" id="txtEdad" name="txtEdad"class="form-control" placeholder="Edad">
       </div>
       <div class="form-group">
+      <label>Estatura:</label>
       <input type="text" id="txtEstatura" name="txtEstatura"class="form-control" placeholder="Estatura">
       </div>
       <div class="form-group">
+      <label>Peso Inicial:</label>
       <input type="text" id="txtPeso" name="txtPeso"class="form-control" placeholder="Peso Inicial">
       </div>
       <div class="form-group">
+      <label>Telefono:</label>
       <input type="text" id="txtTelefono" name="txtTelefono"class="form-control" placeholder="Telefono">
+      </div>
+      <div class="form-group">
+      <label>Sexo:</label>
+      <input type="text" id="txtSexo" name="txtSexo"class="form-control" placeholder="Sexo">
       </div>
     </div>
 
