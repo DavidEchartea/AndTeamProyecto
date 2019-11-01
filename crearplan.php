@@ -165,80 +165,64 @@
       <input type='hidden' name='estatura' id='estatura' value='$estaturaJson'>
       ";?>
     </div>
-      <div class="d-flex justify-content-center align-items-center container ">
-      <div class="row">
-      <div class="col-sm-2 my-2">
-        <input type="hidden" name="" id="resultadoPliegues">
-        <input type="text" class="form-control" id="txtBiceptal" name="txtBiceptal" placeholder="Biceptal" required>
-      </div>
-      <div class="col-sm-2 my-2">
-        <input type="text" class="form-control" id="txtTriceptal" name="txtTriceptal" placeholder="Triceptal">
-      </div>
+  <div class='my-3 d-flex justify-content-center'>
 
-      <div class="col-sm-2 my-2">
-        <input type="text" class="form-control" id="txtSupra" name="txtSupra"placeholder="Suprailiaco">
-      </div>
+    <div class='input-group-text'>Biceptal: </div>      
+    <input type="text" class="form-control" id="txtBiceptal" name="txtBiceptal" placeholder="Biceptal" required>
 
-      <div class="col-sm-2 my-2">
-        <input type="text" class="form-control" id="txtsubEscapular" name="txtsubEscapular"placeholder="Sub Escapular">
-      </div>
-      <div class="col-sm-2 my-2">
-        <input type="text" class="form-control" id="txtAbdominal" name="txtAbdominal"placeholder="Abdominal">
-      </div>
-      <div class="col-sm-2 my-2">
-          <input type="text" class="form-control" id="txtCuadriciptal" name="txtCuadriciptal"placeholder="Cuadriciptal">
-      </div>    
-      </div>
-      </div>
-      <div class="d-flex justify-content-center align-items-center container ">
-      <div class="row">
-      <div class="col-xs-2 my-2">
-        <input type="text" class="form-control" id="txtPectoral"name="txtPectoral" placeholder="Pectoral">
-      </div>
-      </div>
-      <div class="row">
-      <div class="col-xs-2 my-2">
-        <input type="text" class="form-control" id="txtPesoAct" name="txtPesoAct"placeholder="Peso Actual">
-      </div>
-      </div>
-      </div>
+    <div class='input-group-text'>Triceptal: </div>
+    <input type="text" class="form-control" id="txtTriceptal" name="txtTriceptal" placeholder="Triceptal">
 
-      <div class="d-flex justify-content-center align-items-center container ">
-      <div class="row">
+    <div class='input-group-text'>Suprailico: </div>
+    <input type="text" class="form-control" id="txtSupra" name="txtSupra"placeholder="Suprailiaco">
 
-      <div class="col-sm-2 my-2">
-        <input type="text" class="form-control" id="txtIMC" name="txtIMC"placeholder="IMC">
-      </div>
+    <div class='input-group-text'>Sub Escapular: </div>
+    <input type="text" class="form-control" id="txtsubEscapular" name="txtsubEscapular"placeholder="Sub Escapular">
+      
+  </div>
+  
+  <div class='my-3 d-flex justify-content-center'>
 
-      <div class="col-sm-2 my-2">
-      <input type="text" class="form-control" id="txtmasaMus" name="txtmasaMus"placeholder="Masa Muscular">
-      </div>
-      <div class="col-sm-2 my-2">
-      <input type="text" class="form-control" id="txtpesoGrasa" name="txtpesoGrasa"placeholder="Peso: Grasa">
-      </div>
-        
-        <div class="col-sm-2 my-2">
-          <input type="text" class="form-control" id="txtgrasaCorp"name="txtgrasaCorp" placeholder="Grasa Corporal">
-        </div>
-        <div class="col-sm-2 my-2">
-          
-        <input type="text" class="form-control" id="txtCatch" name="txtCatch" placeholder="Catch & McCarthy" disabled>
-      </div>
-      <div>
-        
-      </div>
-      <div class="col-sm-2 my-2">
-        <input type="text" class="form-control" id="txtWoomer"name="txtWoomer" placeholder="Woomersly" disabled>
-      </div>
-      </div>
-      </div>
+    <div class='input-group-text'>Pectoral: </div>      
+    <input type="text" class="col-sm-2" id="txtPectoral"name="txtPectoral" placeholder="Pectoral">
 
-      <div class="d-flex justify-content-center align-items-center container">
-        <button type="button" name="btnCalculos" class="btn btn-secondary background letter" 
+    <div class='input-group-text'>Peso Actual: </div>
+    <input type="text" class="col-sm-2" id="txtPesoAct" name="txtPesoAct"placeholder="Peso Actual">
+
+  </div>
+
+  <div class='my-3 d-flex justify-content-center'>
+
+    <div class='input-group-text'>IMC: </div>      
+    <input type="text" class="form-control" id="txtIMC" name="txtIMC"placeholder="IMC" disabled>
+
+    <div class='input-group-text'>Masa Muscular: </div>
+    <input type="text" class="form-control" id="txtmasaMus" name="txtmasaMus"placeholder="Masa Muscular" disabled>
+
+    <div class='input-group-text'>Peso: Grasa: </div>
+    <input type="text" class="form-control" id="txtpesoGrasa" name="txtpesoGrasa"placeholder="Peso: Grasa" disabled>
+
+    <div class='input-group-text'>Grasa Corporal: </div>
+    <input type="text" class="form-control" id="txtgrasaCorp"name="txtgrasaCorp" placeholder="Grasa Corporal" disabled>
+      
+  </div>
+  
+  <div class='my-3 d-flex justify-content-center'>
+
+    <div class='input-group-text'>Catch & McCarthy: </div>      
+    <input type="text" class="col-sm-2" id="txtCatch" name="txtCatch" placeholder="Catch & McCarthy" disabled>
+
+    <div class='input-group-text'>Woomersly: </div>
+    <input type="text" class="col-sm-2" id="txtWoomer"name="txtWoomer" placeholder="Woomersly" disabled>
+
+	</div>
+
+  <div class="d-flex justify-content-center align-items-center container">
+    <button type="button" name="btnCalculos" class="btn btn-secondary background letter" 
           onclick="suma();calgrasa();calcularPesos();calcularIMC();catchyMc();">Calcular Medidas</button>
-        <button type="button" name="btnGuardar" class="btn btn-secondary background letter" 
+    <button type="button" name="btnGuardar" class="btn btn-secondary background letter" 
         onclick="javascript: grabar('medidas');">Guardar datos</button>  
-      </div>
+  </div>
 
   <div class="my-3">
   <div class="input-group mb-3">
