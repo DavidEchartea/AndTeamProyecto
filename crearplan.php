@@ -166,28 +166,34 @@
       ";?>
     </div>
   <div class='my-3 d-flex justify-content-center'>
-
+    <input type="hidden" name="" id="resultadoPliegues">
     <div class='input-group-text'>Biceptal: </div>      
-    <input type="text" class="form-control" id="txtBiceptal" name="txtBiceptal" placeholder="Biceptal" required>
+    <input type="text" class="form-control" id="txtBiceptal" name="txtBiceptal" placeholder="Biceptal" autofocus required>
 
     <div class='input-group-text'>Triceptal: </div>
-    <input type="text" class="form-control" id="txtTriceptal" name="txtTriceptal" placeholder="Triceptal">
+    <input type="text" class="form-control" id="txtTriceptal" name="txtTriceptal" placeholder="Triceptal" required>
 
     <div class='input-group-text'>Suprailico: </div>
-    <input type="text" class="form-control" id="txtSupra" name="txtSupra"placeholder="Suprailiaco">
+    <input type="text" class="form-control" id="txtSupra" name="txtSupra"placeholder="Suprailiaco" required>
 
     <div class='input-group-text'>Sub Escapular: </div>
-    <input type="text" class="form-control" id="txtsubEscapular" name="txtsubEscapular"placeholder="Sub Escapular">
+    <input type="text" class="form-control" id="txtsubEscapular" name="txtsubEscapular"placeholder="Sub Escapular" required>
       
   </div>
   
   <div class='my-3 d-flex justify-content-center'>
 
     <div class='input-group-text'>Pectoral: </div>      
-    <input type="text" class="col-sm-2" id="txtPectoral"name="txtPectoral" placeholder="Pectoral">
+    <input type="text" class="col-sm-2" id="txtPectoral"name="txtPectoral" placeholder="Pectoral" required >
+
+    <div class='input-group-text'>Abdominal: </div>   
+    <input type="text" class="form-control" id="txtAbdominal" name="txtAbdominal"placeholder="Abdominal" required>
+
+    <div class='input-group-text'>Cuadriciptal: </div> 
+    <input type="text" class="form-control" id="txtCuadriciptal" name="txtCuadriciptal"placeholder="Cuadriciptal" required>
 
     <div class='input-group-text'>Peso Actual: </div>
-    <input type="text" class="col-sm-2" id="txtPesoAct" name="txtPesoAct"placeholder="Peso Actual">
+    <input type="text" class="col-sm-2" id="txtPesoAct" name="txtPesoAct"placeholder="Peso Actual" required>
 
   </div>
 
