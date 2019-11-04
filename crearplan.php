@@ -29,26 +29,20 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
   <script type="text/javascript">
-    $(document).ready(function()
-    {
-      function alerta(mensaje)
-      {
+    $(document).ready(function() {
+      function alerta(mensaje){
         alert(mensaje);
       }
 
-      var metricas = function(id)
-      {
+      var metricas = function(id){
       alert(id);
       return  $.getJSON("datosplan.php",{"id": id});
       }
-      $('#cmb_plan').on('change',function()
-      {
+      $('#cmb_plan').on('change',function() {
         //alert(this.value);
         metricas(this.value)
-        .done(function(response)
-        {
-            if(response.success)
-            {
+        .done(function(response){
+            if(response.success){
               //alert(response.data.mensaje);
               $('#estatura').val(response.data.estatura);
               //alert(response.data.estatura)
@@ -58,16 +52,38 @@
               //alert(response.data.edad);
             }
           })
-        .fail(function(jqXHR, textStatus, errorThrown)
-        {
-            alert(textStatus);
-        });
+        .fail(function(jqXHR, textStatus, errorThrown){
+            alert(textStatus); } );
+      });
+    });
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      function alerta(mensaje){
+        alert(mensaje);
+      }
+
+      var metricas2 = function(id){
+        alert(id);
+      return  $.getJSON("datosDieta.php",{"id": id});
+      }
+      $('#cmb_prote').on('change',function() {
+        //alert(this.value);
+        metricas2(this.value)
+        .done(function(response){
+            if(response.success){
+              $('#txtComida1').val(response.data.comidaJson);
+              //alert(response.data.comidaJson);
+            }
+          })
+        .fail(function(jqXHR, textStatus, errorThrown){
+            alert(textStatus); } );
       });
     });
   </script>
 
 	<style type="text/css">
-
   .navbar-dark .navbar-nav .nav-link
   {
     color: rgb(158,84,84);
@@ -95,8 +111,8 @@
     font-size: 15px;
     float: left;
   }label:after { content: " " }
-
 	</style>
+
 </head>
 <body>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -104,8 +120,6 @@
   		<a class="navbar-brand" href="./menu.html">
   			<img src="./img/pesas.png" width="65" height="50">
   		</a>
-  		
-    
 	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
   	<div class="navbar-nav">
     	<a class="nav-item nav-link" href="./clientes/altacliente.php">Alta cliente</a>
@@ -124,8 +138,6 @@
     </div>
   </div>
   <div class="container-fluid">
-  
-
 <form id='frmPlan' > 
     <div class="d-flex justify-content-center align-items-center container ">
       <div class="row">
@@ -205,7 +217,7 @@
     <div class='input-group-text'>Masa Muscular: </div>
     <input type="text" class="form-control" id="txtmasaMus" name="txtmasaMus"placeholder="Masa Muscular" disabled>
 
-    <div class='input-group-text'>Peso: Grasa: </div>
+    <div class='input-group-text'>Peso Grasa: </div>
     <input type="text" class="form-control" id="txtpesoGrasa" name="txtpesoGrasa"placeholder="Peso: Grasa" disabled>
 
     <div class='input-group-text'>Grasa Corporal: </div>
@@ -214,13 +226,14 @@
   </div>
   
   <div class='my-3 d-flex justify-content-center'>
-
     <div class='input-group-text'>Catch & McCarthy: </div>      
     <input type="text" class="col-sm-2" id="txtCatch" name="txtCatch" placeholder="Catch & McCarthy" disabled>
 
     <div class='input-group-text'>Woomersly: </div>
     <input type="text" class="col-sm-2" id="txtWoomer"name="txtWoomer" placeholder="Woomersly" disabled>
 
+     <div class='input-group-text'>Ritmo Metabolico Basal: </div>
+    <input type="text" class="col-sm-2" id="txtmetabolico" placeholder="Ritmo Metabolico Basal" disabled>
 	</div>
 
   <div class="d-flex justify-content-center align-items-center container">
@@ -235,21 +248,19 @@
   <div class="input-group-prepend">
     <label class="input-group-text" for="inputGroupSelect01">Proteinas</label>
   </div>
-  <select class="custom-select" id="inputGroupSelect01">
+  <select class="custom-select" id="cmb_prote" name="cmb_prote">
     <option selected>Elige una opcion</option>
     <?php  
               while ($registro = mysqli_fetch_array($tablaProte)) {
-
               $nombre_nutri = $registro['nombre_nutri'];
-
               echo "<option value='$nombre_nutri'>$nombre_nutri</option>";
                     }
-                    ?>
+    ?>
   </select>
   <div class="input-group-prepend">
     <label class="input-group-text" for="inputGroupSelect01">Carbohidratos</label>
   </div>
-      <select class="custom-select" id="inputGroupSelect01">
+      <select class="custom-select" id="cmb_carbs">
         <option selected>Elige una opcion</option>
                 <?php  
                   while ($registro = mysqli_fetch_array($tablaCarbs)) {
@@ -261,7 +272,7 @@
   <div class="input-group-prepend">
     <label class="input-group-text" for="inputGroupSelect01">Grasas</label>
   </div>
-  <select class="custom-select" id="inputGroupSelect01">
+  <select class="custom-select" id="cmb_grasas">
     <option selected>Elige una opcion</option>
             <?php  
               while ($registro = mysqli_fetch_array($tablaGrasas)) {
@@ -276,8 +287,6 @@
   <div class="d-flex align-items-center justify-content-center">
     <button class="btn btn-secondary background letter">AHHHHH</button>
   </div>
-
-
   <div class="container">
        <div class="nav nav-tabs" id="nav-tab" role="tablist">
             <a class="nav-link active" id="comida1" data-toggle="tab" href="#comida1" role="tab" aria-controls="comida1" aria-selected="true">Comida 1</a>
@@ -290,7 +299,7 @@
           </div>
           <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
           <div class="tab-pane fade show active" id="comida1" role="tabpanel" aria-labelledby="comida1">
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" id="txtComida1" rows="3"></textarea>
           </div>
           <div class="tab-pane fade" id="comida2" role="tabpanel" aria-labelledby="comida2">
             <textarea class="form-control" id="txtComida2" rows="3"></textarea>
@@ -321,12 +330,6 @@
       <input type="text" class="form-control" id="txtconsumidas" placeholder="Consumidas">
     </div>
   </div>
-
-  <div class="col-sm-3 my-2 d-flex justify-content-center align-items-center container">
-    <input type="text" class="form-control" id="txtmetabolico" placeholder="Ritmo Metabolico Basal">
-    <button type="button" class="btn btn-secondary background letter">Generar</button>
-  </div>
-
   <div class="my-3 d-flex justify-content-center align-items-center">
     <button type="button" class="btn btn-secondary background letter">Generar PDF</button>
     <button type="button" class="btn btn-secondary background letter">Agregar entrenamiento</button>
