@@ -1,3 +1,14 @@
+function catchyMcMujeres(){
+	var triceps = document.getElementById('txtTriceptal').value;
+	var supra = document.getElementById('txtSupra').value;
+	var cuadricep = document.getElementById('txtCuadriciptal').value;
+	var edad = document.getElementById('edad').value;
+	var sumaP = parseInt(triceps) + parseInt(supra) + parseInt(cuadricep);
+	var densidad  = ((0.0009929 * parseInt(sumaP)) + (0.0000023 * (parseInt(sumaP)*parseInt(sumaP))) - (0.0001392 * parseInt(edad)));
+	var porcentajeGrasa = (495 / parseFloat(densidad) - 450);
+	document.getElementById('txtCatch').value = new Intl.NumberFormat().format(porcentajeGrasa);
+}
+
 function catchyMc(){
 	var pecho = document.getElementById('txtPectoral').value;
 	var abs = document.getElementById('txtAbdominal').value;

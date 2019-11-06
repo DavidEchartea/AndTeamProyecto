@@ -1,13 +1,15 @@
 <?php
-//consulta que es sanitizar entrada
+//consulta que es sanitizar entrada 
 include './bd/conexion.php';
 
+$jsondata["success"] = false;
+$jsondata["data"]["mensaje"]="todo mal";
+
 if(isset($_GET['id'])){
-$qryEst='SELECT idPaciente,estatura, edad, peso FROM paciente WHERE idPaciente = 1';
+$qryEst='SELECT idPaciente,estatura, edad, peso FROM paciente WHERE idPaciente = '.$_GET['id'];
 $result= mysqli_query($link,$qryEst);
 //verificar si el resultado es algo
 while ( $row = mysqli_fetch_array($result)){
-//aqui hago la consulta
 $estaturaJson =$row['estatura'];
 $edadJson	=$row['edad'];
 $PesRec	=$row['peso'];
@@ -19,14 +21,8 @@ $jsondata["data"]["estatura"]= $estaturaJson;
 $jsondata["data"]["pesoRec"]= $PesRec;
 $jsondata["data"]["pesoMax"]= $PesMax;
 $jsondata["data"]["edad"]=$edadJson;
-//$jsondata["data"]["metricas"]=array();
-//$jsondata["data"]["metricas"][]=(99,88,77);
 }
-else{
-$jsondata["success"] = false;
-$jsondata["data"]["mensaje"]="todo mal";
-$jsondata["data"]["pesoRec"] =88;
-}
+
 header('Content-type: application/json; charset=utf-8');
 echo json_encode($jsondata, JSON_FORCE_OBJECT);
 exit();
