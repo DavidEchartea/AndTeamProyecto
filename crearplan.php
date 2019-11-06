@@ -21,14 +21,16 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title>Crear Plan</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+  <link rel="stylesheet" href="./estilos.css">
+	<link rel="stylesheet" href="./font-awesome.css">
+  <link rel="icon" href="./img/muscle.png" type="image/png">
+	<script src="./main.js"></script>
   <script type="text/javascript">
+  
+
     $(document).ready(function() {
       function alerta(mensaje){
         alert(mensaje);
@@ -82,6 +84,11 @@
   .letter{color: #ffffff;}
   .label{font-size: 15px;float: left;}
   label:after { content: " " }
+  textarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 	</style>
 </head>
 <body>
@@ -242,40 +249,50 @@
   <div class="d-flex align-items-center justify-content-center">
     <button class="btn btn-secondary background letter">AHHHHH</button>
   </div>
-  <div class="container">
-       <div class="nav nav-tabs" id="nav-tab" role="tablist">
-            <a class="nav-link active" id="comida1" data-toggle="tab" href="#comida1" role="tab" aria-controls="comida1" aria-selected="true">Comida 1</a>
-            <a class="nav-link" id="comida2" data-toggle="tab" href="#comida2" role="tab" aria-controls="comida2" aria-selected="false">Comida 2</a>
-            <a class="nav-link" id="comida3" data-toggle="tab" href="#comida3" role="tab" aria-controls="comida3" aria-selected="false">Comida 3</a>
-            <a class="nav-link" id="comida4" data-toggle="tab" href="#comida4" role="tab" aria-controls="comida4" aria-selected="false">Comida 4</a>
-            <a class="nav-link" id="comida5" data-toggle="tab" href="#comida5" role="tab" aria-controls="comida5" aria-selected="false">Comida 5</a>
-            <a class="nav-link" id="comida6" data-toggle="tab" href="#comida6" role="tab" aria-controls="comida6" aria-selected="false">Comida 6</a>
-            <a class="nav-link" id="comida7" data-toggle="tab" href="#comida7" role="tab" aria-controls="comida7" aria-selected="false">Comida 7</a>
-          </div>
-          <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
-          <div class="tab-pane fade show active" id="comida1" role="tabpanel" aria-labelledby="comida1">
-            <textarea class="form-control" id="txtComida1" rows="3"></textarea>
-          </div>
-          <div class="tab-pane fade" id="comida2" role="tabpanel" aria-labelledby="comida2">
-            <textarea class="form-control" id="txtComida2" rows="3"></textarea>
-          </div>
-          <div class="tab-pane fade" id="comida3" role="tabpanel" aria-labelledby="comida3">
-            <textarea class="form-control" id="txtComida3" rows="3"></textarea>
-          </div>
-          <div class="tab-pane fade" id="comida4" role="tabpanel" aria-labelledby="comida4">
-            <textarea class="form-control" id="txtComida4" rows="3"></textarea>
-          </div>
-          <div class="tab-pane fade" id="comida5" role="tabpanel" aria-labelledby="comida5">
-            <textarea class="form-control" id="txtComida5" rows="3"></textarea>
-          </div>
-          <div class="tab-pane fade" id="comida6" role="tabpanel" aria-labelledby="comida6">
-            <textarea class="form-control" id="txtComida6" rows="3"></textarea>
-          </div>
-          <div class="tab-pane fade" id="comida7" role="tabpanel" aria-labelledby="comida7">
-            <textarea class="form-control" id="txtComida7" rows="3"></textarea>
-          </div>
-        </div>
-  </div>
+  <div class="wrap">
+		<ul class="tabs">
+			<li><a href="#tab1"><span class="fa fa-cutlery"></span><span class="tab-text">Comida 1</span></a></li>
+			<li><a href="#tab2"><span class="fa fa-cutlery"></span><span class="tab-text">Comida 2</span></a></li>
+			<li><a href="#tab3"><span class="fa fa-cutlery"></span><span class="tab-text">Comida 3</span></a></li>
+      <li><a href="#tab4"><span class="fa fa-cutlery"></span><span class="tab-text">Comida 4</span></a></li>
+      <li><a href="#tab5"><span class="fa fa-cutlery"></span><span class="tab-text">Comida 5</span></a></li>
+			<li><a href="#tab6"><span class="fa fa-cutlery"></span><span class="tab-text">Comida 6</span></a></li>
+			<li><a href="#tab7"><span class="fa fa-cutlery"></span><span class="tab-text">Comida 7</span></a></li>
+
+		</ul>
+
+		<div class="secciones">
+			<article id="tab1">
+				<h4 align="center">Comida 1</h4>
+				<textarea placeholder="Comida 1" rows="8" cols="125"></textarea>
+			</article>
+			<article id="tab2">
+      <h4 align="center">Comida 2</h4>
+				<textarea placeholder="Comida 2" rows="8" cols="125"></textarea>
+      </article>
+      <article id="tab3">
+      <h4 align="center">Comida 3</h4>
+				<textarea placeholder="Comida 3" rows="8" cols="125"></textarea>
+      </article>
+      <article id="tab4">
+      <h4 align="center">Comida 4</h4>
+				<textarea placeholder="Comida 4" rows="8" cols="125"></textarea>
+      </article>
+      <article id="tab5">
+      <h4 align="center">Comida 5</h4>
+				<textarea placeholder="Comida 5" rows="8" cols="125"></textarea>
+      </article>
+      <article id="tab6">
+      <h4 align="center">Comida 6</h4>
+				<textarea placeholder="Comida 6" rows="8" cols="125"></textarea>
+      </article>
+      <article id="tab7">
+      <h4 align="center">Comida 7</h4>
+				<textarea placeholder="Comida 7" rows="8" cols="125"></textarea>
+			</article>
+			
+		</div>
+	</div>
     
   <div class="d-flex justify-content-center align-items-center container">
     <div class="col-sm-2 my-1">
@@ -299,7 +316,7 @@
   </div>
     <div class="row">
       <div class="col">
-      <textarea id="txtSuplementos" rows="3" class="form-control" placeholder="Ingrese suplementos aqui..."></textarea>
+      <textarea id="txtSuplementos" rows="6" class="form-control col-sm-6" placeholder="Ingrese suplementos aqui..."></textarea>
       </div>
     </div>
     
