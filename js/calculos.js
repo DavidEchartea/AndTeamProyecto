@@ -50,81 +50,69 @@ function suma()
 
 function calgrasa()
 {
-	var pliegues = document.getElementById('resultadoPliegues').value;
+	var txtpliegues = document.getElementById('resultadoPliegues').value;
 	var txtedad = document.getElementById('edad').value;
 	var edad = parseInt(txtedad);
-	 switch(pliegues)
-	 {
-	 	case "15":
-	 	alert("Caso 15");
-	 	if (edad > 16 && edad < 30)
-	 	{
-	 		var grasa = 4.8;
-	 		document.getElementById('txtWoomer').value = grasa;
-	 	}
+	var pliegues = parseInt(txtpliegues);
+	var sexo = document.getElementById('sexo');
+	
+	if (sexo == "Hombre" || sexo == "hombre" || sexo == "Masculino" || sexo == "masculino")
+	{
+		alert("Eres hombre");
+		if ((edad > 16) && (edad < 30))
+		{
+			if (pliegues == 15)
+			{
+				var grasa = 4.8;
+				document.getElementById('txtgrasaCorp').value = grasa;
+				
+			}
 
-	 	else
-	 	{
-			 alert("Datos Invalidos, intente de nuevo!");
-	 	}
+			else if((pliegues > 15) && (pliegues < 20))
+			{
+				var grasamod = (pliegues * 4.8) / 15;
+				document.getElementById('txtgrasaCorp').value=grasamod;
+			}
 
-	 	break;
+			if (pliegues == 20) 
+			{
+				var grasa = 8.1;
+				document.getElementById('txtgrasaCorp').value=grasa;
+				
+			}
 
-	 	case "20":
-	 	alert("Caso 20");
-	 	break;
+			else if ((pliegues > 20) && (pliegues < 25))
+			{
+				var grasamod = (pliegues * 8.1) / 20;
+				document.getElementById('txtgrasaCorp').value=grasamod;
+			}
 
-	 	case "25":
-	 	alert("Caso 25");
-		break;
-		 
-		case "30":
-		alert("Caso 30");
-		break;
-			
-		case "35":
-	 	alert("Caso 35");
-		 break;
-		 
-		case "40":
-		alert("Caso 40");
-		break;
+			if (pliegues == 25) 
+			{
+				var grasa = 10.5;
+				document.getElementById('txtgrasaCorp').value= grasa;
+			}
+			else if((pliegues > 25) && (pliegues < 30))
+			{
+				var grasamod = (pliegues * 10.5) / 25;
+				document.getElementById('txtgrasaCorp').value = grasamod;
+			}
 
-		case"45":
-		alert("Caso 45");
-		break;
+			if (pliegues == 30) 
+			{
+				var grasa = 12.9;
+				document.getElementById('txtgrasaCorp').value = grasa;
+			}
+			else if ((pliegues > 30) && (pliegues < 35))
+			{
+				var grasamod = (pliegues * 12.9) / 30;
+				document.getElementById('txtgrasaCorp').value = grasamod;
+			}
+		}
+	}
+	else if(sexo == "Mujer" || sexo == "mujer" || sexo == "Femenino" || sexo == "femenino")
+	{
+		alert("Eres mujer");
+	}
 
-		case "50":
-		break;
-
-		case "55":
-		break;
-
-		case "60":
-		break;
-
-		case "65":
-		break;
-
-		case "70":
-		break;
-
-		case "75":
-		break;
-
-		case "80":
-		break;
-
-		case "85":
-		break;
-
-		case "90":
-		break;
-
-		case "95":
-		break;
-
-		case "100":
-		break;
-	 }
 }
