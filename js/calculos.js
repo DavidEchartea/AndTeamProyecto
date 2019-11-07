@@ -54,18 +54,16 @@ function calgrasa()
 	var txtedad = document.getElementById('edad').value;
 	var edad = parseInt(txtedad);
 	var pliegues = parseInt(txtpliegues);
-	var sexo = document.getElementById('sexo');
+	var sexo = document.getElementById('sexo').value;
 	
 	if (sexo == "Hombre" || sexo == "hombre" || sexo == "Masculino" || sexo == "masculino")
 	{
-		alert("Eres hombre");
 		if ((edad > 16) && (edad < 30))
 		{
 			if (pliegues == 15)
 			{
 				var grasa = 4.8;
 				document.getElementById('txtgrasaCorp').value = grasa;
-				
 			}
 
 			else if((pliegues > 15) && (pliegues < 20))
@@ -108,11 +106,184 @@ function calgrasa()
 				var grasamod = (pliegues * 12.9) / 30;
 				document.getElementById('txtgrasaCorp').value = grasamod;
 			}
+
+			if (pliegues == 35)
+			{
+				var grasa = 14.7;
+				document.getElementById('txtgrasaCorp').value=grasa;
+			}
+			else if((pliegues > 35) && (pliegues < 40))
+			{
+				var gramod = (pliegues * 14.7) / 35;
+				document.getElementById('txtgrasaCorp').value=grasamod;
+			}
+
+			if (pliegues == 40)
+			{
+				var grasa = 16.4;
+				document.getElementById('txtgrasaCorp').value=grasa;
+			}
+
+			if ((pliegues > 40) && (pliegues < 45)) 
+			{
+				var grasamod = (pliegues * 16.4) / 40;
+				document.getElementById('txtgrasaCorp').value=grasamod;
+			}
+
+			if (pliegues == 45) 
+			{
+				var grasa = 17.7;
+				document.getElementById('txtgrasaCorp').value=grasa;
+			}
+			else if ((pliegues > 45) && (pliegues < 50)) 
+			{
+				var grasamod = (pliegues * 17.7) / 45;
+				document.getElementById('txtgrasaCorp').value=grasamod;
+			}
+
+			if (pliegues == 50)
+			{
+				var grasa = 19;
+				document.getElementById('txtgrasaCorp').value=grasa;
+			}
+			else if ((pliegues > 50) && (pliegues < 55)) 
+			{
+				var grasamod = (pliegues * 19) /50;
+				document.getElementById('txtgrasaCorp').value=grasamod;
+			}
+
+			if (pliegues == 55) 
+			{
+				var grasa = 20.1;
+				document.getElementById('txtgrasaCorp').value=grasa;
+			}
+			else if ((pliegues > 55) && (pliegues < 60)) 
+			{
+				var grasamod = (pliegues * 20.1) / 55;
+				document.getElementById('txtgrasaCorp').value=grasamod;
+			}
+
+			if (pliegues == 60)
+			{
+				var grasa = 21.2;
+				document.getElementById('txtgrasaCorp').value=grasa;
+			}
+			else if ((pliegues > 60) && (pliegues < 65)) 
+			{
+				var grasamod = (pliegues * 21.2) / 60;
+				document.getElementById('txtgrasaCorp').value=grasamod;
+			}
+
+			if (pliegues == 65) 
+			{
+				var grasa = 22.2;
+				document.getElementById('txtgrasaCorp').value=grasa;
+			}
+			else if ((pliegues > 65) && (pliegues<70)) 
+			{
+				var grasamod= (pliegues * 22.2) / 65;
+				document.getElementById('txtgrasaCorp').value=grasamod;
+			}
+
+			if (pliegues == 70) 
+			{
+				var grasa=23.1;
+				document.getElementById('txtgrasaCorp').value=grasa;
+			}
+			else if ((pliegues>70) && (pliegues < 75))
+			{
+				var grasamod = (pliegues * 23.1) / 70;
+				document.getElementById('txtgrasaCorp').value=grasamod
+			}
+
+			if (pliegues == 75) 
+			{
+				var grasa = 24;
+				document.getElementById('txtgrasaCorp').value=grasa;
+			}
+			else if ((pliegues>75) && (pliegues<80)) 
+			{
+				var grasamod = (pliegues * 24) / 75;
+				document.getElementById('txtgrasaCorp').value=grasamod;
+			}
+			if (pliegues == 80)
+			 {
+			 	var grasa = 24.8;
+			 	document.getElementById('txtgrasaCorp').value=grasa;
+			 }
+			 else if ((pliegues> 80) && (pliegues<85))
+			 {
+			 	var grasamod = (pliegues * 24.8) / 80;
+			 	document.getElementById('txtgrasaCorp').value=grasamod;
+			 }
+
+			 if (pliegues == 85)
+			 {
+			 	var grasa = 25.3;
+			 	document.getElementById('txtgrasaCorp').value=grasa;
+			 }
+			 else if ((pliegues> 85) && (pliegues<90))
+			 {
+			 	var grasamod = (pliegues * 25.3) / 85;
+			 	document.getElementById('txtgrasaCorp').value=grasamod;
+			 }
+
+			 if (pliegues == 90)
+			 {
+			 	var grasa = 26.2;
+			 	document.getElementById('txtgrasaCorp').value=grasa;
+			 }
+			 else if ((pliegues> 90) && (pliegues<95))
+			 {
+			 	var grasamod = (pliegues * 26.2) / 90;
+			 	document.getElementById('txtgrasaCorp').value=grasamod;
+			 }
+			 if (pliegues == 95) 
+			 {
+			 	var grasa = 26.9;
+			 	document.getElementById('txtgrasaCorp').value=grasa;
+			 }
+			 else if((pliegues > 95) && (pliegues<100))
+			 {
+			 	var grasamod = (pliegues * 26.9) / 95;
+			 	document.getElementById('txtgrasaCorp').value=grasamod;
+			 }
+
+			 if (pliegues == 100)
+			 {
+			 	var grasa = 27.6;
+			 	document.getElementById('txtgrasaCorp').value=grasa;
+			 }
+			 else if ((pliegues>100) && (pliegues<105))
+			 {
+			 	var grasamod = (pliegues * 27.6)/100;
+			 	document.getElementById('txtgrasaCorp').value=grasamod;
+			 }
+			 if (pliegues == 105)
+			 {
+			 	var grasa = 28.2;
+			 	document.getElementById('txtgrasaCorp').value=grasa;
+			 }
+			 else if ((pliegues>105) && (pliegues<110))
+			 {
+			 	var grasamod = (pliegues * 28.2)/105;
+			 	document.getElementById('txtgrasaCorp').value=grasamod;
+			 }
+
+			 if (pliegues == 110)
+			 {
+			 	var grasa = 28.8;
+			 	document.getElementById('txtgrasaCorp').value=grasa;
+			 }
+			 else if ((pliegues>110) && (pliegues<115))
+			 {
+			 	var grasamod = (pliegues * 28.8)/110;
+			 	document.getElementById('txtgrasaCorp').value=grasamod;
+			 }
 		}
 	}
 	else if(sexo == "Mujer" || sexo == "mujer" || sexo == "Femenino" || sexo == "femenino")
 	{
-		alert("Eres mujer");
 	}
 
 }
