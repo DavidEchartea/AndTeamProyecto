@@ -19,9 +19,10 @@
             $correo= mysqli_real_escape_string($link, $_POST['txtCorreo']);
 			$edad= mysqli_real_escape_string($link, $_POST['txtEdad']);
 			$objetivo= mysqli_real_escape_string($link, $_POST['txtObjetivo']);
+			$sexo= mysqli_real_escape_string($link,$_POST['sexo']);
 			
-            $strQry="INSERT INTO `paciente`(`nombre_paciente`, `apellido_pat`, `apellido_mat`, `estatura`, `edad`, `peso`, `correo`, `telefono`, `objetivo`) 
-            VALUES ('$nombre_paciente','$apellido_pat','$apellido_mat','$estatura','$edad','$peso','$correo','$telefono','$objetivo')";
+            $strQry="INSERT INTO `paciente`(`nombre_paciente`, `apellido_pat`, `apellido_mat`, `estatura`, `edad`, `peso`, `correo`, `telefono`, `objetivo`,`sexo`) 
+            VALUES ('$nombre_paciente','$apellido_pat','$apellido_mat','$estatura','$edad','$peso','$correo','$telefono','$objetivo','$sexo')";
 			
 			$result = mysqli_query($link, $strQry) or die("Error al OBO ejecutar el query: ".mysqli_error($link));
 

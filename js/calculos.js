@@ -56,7 +56,7 @@ function calgrasa()
 	var pliegues = parseInt(txtpliegues);
 	var sexo = document.getElementById('sexo').value;
 	
-	if (sexo == "Hombre" || sexo == "hombre" || sexo == "Masculino" || sexo == "masculino")
+	if (sexo == "Masculino")
 	{
 		if ((edad > 16) && (edad < 30))
 		{
@@ -282,7 +282,7 @@ function calgrasa()
 			 }
 		}
 	}
-	else if(sexo == "Mujer" || sexo == "mujer" || sexo == "Femenino" || sexo == "femenino")
+	else if(sexo == "Femenino")
 	{
 	}
 
