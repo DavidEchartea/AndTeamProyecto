@@ -20,12 +20,14 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title>Crear Plan</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
   <link rel="stylesheet" href="./estilos.css">
 	<link rel="stylesheet" href="./font-awesome.css">
+
   <link rel="icon" href="./img/muscle.png" type="image/png">
 	<script src="./main.js"></script>
   <script type="text/javascript">
@@ -89,6 +91,10 @@
     margin-left: auto;
     margin-right: auto;
 }
+  .thead{
+    background-color: #9e5454;
+  }
+
 	</style>
 </head>
 <body>
@@ -249,6 +255,33 @@
   <div class="d-flex align-items-center justify-content-center">
     <button class="btn btn-secondary background letter">AHHHHH</button>
   </div>
+
+  <table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col" class="thead">Nombre</th>
+      <th scope="col" class="thead">Carbohidratos</th>
+      <th scope="col" class="thead">Grasas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+  <!--
   <div class="wrap">
 		<ul class="tabs">
 			<li><a href="#tab1"><span class="fa fa-cutlery"></span><span class="tab-text">Comida 1</span></a></li>
@@ -293,6 +326,7 @@
 			
 		</div>
 	</div>
+  -->
     
   <div class="d-flex justify-content-center align-items-center container">
     <div class="col-sm-2 my-1">
