@@ -116,7 +116,8 @@
       <img src="./img/logo1.png">
     </div>
   <div class="card text-center">
-    <div class="card-header"> Crear plan </div>
+    <div class="card-header"> Crear plan 
+    <span><img src="./img/plan.png"></span> </div>
   </div>
   <div class="container-fluid">
 <form id='frmPlan' > 
@@ -205,9 +206,9 @@
 
   <div class="d-flex justify-content-center align-items-center container">
     <button type="button" name="btnCalculos" class="btn btn-secondary background letter" 
-          onclick="suma();calgrasa();calcularPesos();calcularIMC();catchyMc();">Calcular Medidas</button>
+          onclick="suma();calgrasa();calcularPesos();calcularIMC();catchyMc();">Calcular Medidas <span><img src='./img/cal.png'></span></button>
     <button type="button" name="btnGuardar" class="btn btn-secondary background letter" 
-        onclick="javascript: grabar('medidas');">Guardar datos</button>  
+        onclick="javascript: grabar('medidas');">Guardar datos <span><img src='./img/save.png'></span></button>  
   </div>
 
   <div class="my-3">
@@ -337,7 +338,7 @@
     </div>
   </div>
   <div class="my-3 d-flex justify-content-center align-items-center">
-    <button type="button" class="btn btn-secondary background letter">Generar PDF</button>
+    <button type="button" class="btn btn-secondary background letter">Generar PDF <span><img src="./img/pdf.png"></span></button>
     <button type="button" class="btn btn-secondary background letter">Agregar entrenamiento</button>
     <button type="button" class="btn btn-secondary background letter">Agregar menu</button>
   </div>
@@ -345,7 +346,8 @@
   <div class="my-2">
   <div class="card text-center">
     <div class="card-header">
-      Suplementos a manejar
+      Suplementos a manejar 
+      <span><img src="./img/vitamins.png"></span> </div>
     </div>
   </div>
     <div class="row">

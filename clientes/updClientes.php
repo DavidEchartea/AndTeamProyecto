@@ -105,6 +105,7 @@ session_start();
       <div class='card text-center'>
         <div class='card-header'>
         Modificando Clientes
+        <span><img src='../img/edit-user.png'></span>
         </div>
       </div>
     <form  name='frmUpdPaciente' id='frmUpdPaciente' action='./qryclientes.php' method='POST'>
@@ -178,8 +179,8 @@ session_start();
       <input type='hidden' name='txtOpc' id='txtOpc'>
       <input type='hidden' name='txtId' id='txtId'>
 
-      <button type='button' id='btnGuardar' name='btnGuardar' class='btn btn-secondary float-center background letter' onClick='enviar(\"upd\")'> Guardar Cambios </button>
-      <button type='button' class='btn btn-secondary  float-center background letter' onClick='enviar(\"regresar\")'>Volver al menu</button>
+      <button type='button' id='btnGuardar' name='btnGuardar' class='btn btn-secondary float-center background letter' onClick='enviar(\"upd\")'> Guardar Cambios <span><img src='../img/save.png'></span></button>
+      <button type='button' class='btn btn-secondary  float-center background letter' onClick='enviar(\"regresar\")'><span><img src='../img/return.png'></span> Volver al menu</button>
     </div>
   </div> <!--DIV BOTONES-->
   
