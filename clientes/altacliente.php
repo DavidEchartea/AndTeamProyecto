@@ -84,6 +84,7 @@
   <div class="card text-center">
     <div class="card-header">
       Alta Clientes
+      <span><img src="../img/add-user.png"></span>
     </div>
   </div>
 <form id='frmAltaClientes' action='./qryclientes.php' method="POST">
@@ -343,8 +344,8 @@
     </div><!--Container-->
     <div class="card text-center">
       <div class="card-header">
-      <button type="button" name="btnAgregar" class="btn btn-secondary  background letter" onclick="javascript: grabar('clientes')"> Agregar </button>
-      <button type="button" class="btn btn-secondary  float-left background letter" href="./menu.html">Volver al menu</button>
+      <button type="button" name="btnAgregar" class="btn btn-secondary  background letter" onclick="javascript: grabar('clientes')">Agregar <span><img src="../img/add24.png"></span></button>
+      <button type="button" class="btn btn-secondary  float-left background letter" href="./menu.html"><span><img src="../img/return.png"></span> Volver al menu</button>
       </div>
     </div>
   </form>
