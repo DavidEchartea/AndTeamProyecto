@@ -34,6 +34,7 @@
   
 
     $(document).ready(function() {
+
       function alerta(mensaje){
         alert(mensaje);
       }
@@ -66,6 +67,7 @@
         metricas2(this.value)
         .done(function(response){
             if(response.success){
+              $('#tablaAjax').load('./HtmlAjax.php');
               $('#txtComida1').val(response.data.comidaJson);
               /*$('#txtComida1').val(response.data.comidaId);
               $('#txtComida1').val(response.data.comidaProte);
@@ -255,32 +257,10 @@
   <div class="d-flex align-items-center justify-content-center">
     <button class="btn btn-secondary background letter">AHHHHH</button>
   </div>
+  <div class="d-flex align-items-center justify-content-center" id="tablaAjax">
+    
+  </div>
 
-  <table class="table table-striped table-dark">
-  <thead>
-    <tr>
-      <th scope="col" class="thead">Nombre</th>
-      <th scope="col" class="thead">Carbohidratos</th>
-      <th scope="col" class="thead">Grasas</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
   <!--
   <div class="wrap">
 		<ul class="tabs">
