@@ -210,7 +210,7 @@
 
   <div class="d-flex justify-content-center align-items-center container">
     <button type="button" name="btnCalculos" class="btn btn-secondary background letter" 
-          onclick="suma();calgrasa();calcularPesos();calcularIMC();catchyMc();">Calcular Medidas <span><img src='./img/cal.png'></span></button>
+          onclick="suma();calgrasa();calcularPesos();calcularIMC();catchyMc();calpesoGrasa();calmasaMuscular();">Calcular Medidas <span><img src='./img/cal.png'></span></button>
     <button type="button" name="btnGuardar" class="btn btn-secondary background letter" 
         onclick="javascript: grabar('medidas');">Guardar datos <span><img src='./img/save.png'></span></button>  
   </div>

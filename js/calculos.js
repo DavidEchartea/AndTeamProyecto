@@ -47,7 +47,18 @@ function suma()
 	document.getElementById('resultadoPliegues').value = pliegue;
 	return pliegue;
 }
-
+function calpesoGrasa(){
+	var grasacorp = document.getElementById('txtgrasaCorp').value;
+	var peso = document.getElementById('txtPesoAct').value;
+	var pesoGrasa = parseInt(grasacorp) * parseInt(peso);
+	document.getElementById('txtpesoGrasa').value= pesoGrasa;
+}
+function calmasaMuscular(){
+	var pesograsa = document.getElementById('txtpesoGrasa').value;
+	var pesoactual = document.getElementById('txtPesoAct').value;
+	masamus = parseInt(pesograsa) - parseInt(pesoactual);
+	document.getElementById('txtmasaMus').value = masamus;
+}
 function calgrasa()
 {
 	var txtpliegues = document.getElementById('resultadoPliegues').value;
