@@ -84,6 +84,7 @@
   <div class="card text-center">
     <div class="card-header">
       Alta Clientes
+      <span><img src="../img/add-user.png"></span>
     </div>
   </div>
 <form id='frmAltaClientes' action='./qryclientes.php' method="POST">
@@ -155,6 +156,12 @@
      <div class="row">
       <div class="col">
         <div class="card text-center">
+          <div class="card text-center">
+            <div class="card-header">
+              Clientes
+              <span><img src="../img/users.png"></span>
+            </div>
+          </div>
           <div class="table-wrapper-scroll-y my-custom-scrollbar">
 
             <table class="table table-hover table-dark">
@@ -187,12 +194,9 @@
   <title>Alta Clientes</title>
   <link rel='stylesheet'  href='estilos.css'>
 
-  <link href='/docs/4.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
-  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
-
-  <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous'></script>
-  <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous'></script>
+  <link rel='stylesheet' href='../css/bootstrap.min.css'>
+  <script src='../js/jquery-3.4.1.min.js'></script>
+  <script src='../js/bootstrap.min.js'></script>
   <link rel='icon' href='../img/muscle.png' type='image/png'>
   <style type'text/css'>
   .my-custom-scrollbar {
@@ -256,6 +260,7 @@
   <div class='card text-center'>
     <div class='card-header'>
       Alta Clientes
+       <span><img src='../img/add-user.png'></span>
     </div>
   </div>
 <form id='frmAltaClientes' action='./qryclientes.php' method='POST'>
@@ -343,8 +348,8 @@
     </div><!--Container-->
     <div class="card text-center">
       <div class="card-header">
-      <button type="button" name="btnAgregar" class="btn btn-secondary  background letter" onclick="javascript: grabar('clientes')"> Agregar </button>
-      <button type="button" class="btn btn-secondary  float-left background letter" href="./menu.html">Volver al menu</button>
+      <button type="button" name="btnAgregar" class="btn btn-secondary  background letter" onclick="javascript: grabar('clientes')">Agregar  <span><img src="../img/plus-symbol.png"></span></button>
+      <button type="button" class="btn btn-secondary  float-left background letter" href="../menu.html"><span><img src="../img/return.png"></span> Volver al menu</button>
       </div>
     </div>
   </form>
