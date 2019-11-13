@@ -63,32 +63,32 @@ function calgrasa()
 			if (pliegues == 15)
 			{
 				var grasa = 4.8;
-				document.getElementById('txtgrasaCorp').value = grasa;
+				document.getElementById('txtWoomer').value = grasa;
 			}
 
 			else if((pliegues > 15) && (pliegues < 20))
 			{
 				var grasamod = (pliegues * 4.8) / 15;
-				document.getElementById('txtgrasaCorp').value=grasamod;
+				document.getElementById('txtWoomer').value=grasamod;
 			}
 
 			if (pliegues == 20) 
 			{
 				var grasa = 8.1;
-				document.getElementById('txtgrasaCorp').value=grasa;
+				document.getElementById('txtWoomer').value=grasa;
 				
 			}
 
 			else if ((pliegues > 20) && (pliegues < 25))
 			{
 				var grasamod = (pliegues * 8.1) / 20;
-				document.getElementById('txtgrasaCorp').value=grasamod;
+				document.getElementById('txtWoomer').value=grasamod;
 			}
 
 			if (pliegues == 25) 
 			{
 				var grasa = 10.5;
-				document.getElementById('txtgrasaCorp').value= grasa;
+				document.getElementById('txtWoomer').value= grasa;
 			}
 			else if((pliegues > 25) && (pliegues < 30))
 			{

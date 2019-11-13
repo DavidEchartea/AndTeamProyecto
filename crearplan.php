@@ -54,6 +54,7 @@
               $('#PesoRec').val(response.data.pesoRec);
               $('#PesoMax').val(response.data.pesoMax);
               $('#edad').val(response.data.edad);
+              $('#sexo').val(response.data.sexo);
               //alert(response.data.edad);
             }
           }).fail(function(jqXHR, textStatus, errorThrown){alert(textStatus); } );
@@ -151,6 +152,7 @@
 
       <input type='hidden' name='edad' id='edad' >
       <input type='hidden' name='estatura' id='estatura' >
+      <input type='hidden' name="sexo" id='sexo'>
     </div>
     <div class='my-3 d-flex justify-content-center'>
      <input type="hidden" name="" id="resultadoPliegues">
