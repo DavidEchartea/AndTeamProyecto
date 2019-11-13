@@ -59,6 +59,11 @@ function calmasaMuscular(){
 	masamus = parseInt(pesograsa) - parseInt(pesoactual);
 	document.getElementById('txtmasaMus').value = masamus;
 }
+function calrmb(){
+	var masaMuscular = document.getElementById('txtmasaMus').value;
+	var rmb = (parseFloat(masaMuscular) * 21.7) + 370;
+	document.getElementById('txtrmb').value=rmb;
+}
 function calgrasa()
 {
 	var txtpliegues = document.getElementById('resultadoPliegues').value;

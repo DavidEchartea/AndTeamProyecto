@@ -205,12 +205,12 @@
     <input type="text" class="col-sm-2" id="txtWoomer"name="txtWoomer" placeholder="Woomersly" disabled>
 
      <div class='input-group-text'>Ritmo Metabolico Basal: </div>
-    <input type="text" class="col-sm-2" id="txtmetabolico" placeholder="Ritmo Metabolico Basal" disabled>
+    <input type="text" class="col-sm-2" id="txtrmb" placeholder="Ritmo Metabolico Basal" disabled>
 	</div>
 
   <div class="d-flex justify-content-center align-items-center container">
     <button type="button" name="btnCalculos" class="btn btn-secondary background letter" 
-          onclick="suma();calgrasa();calcularPesos();calcularIMC();catchyMc();calpesoGrasa();calmasaMuscular();">Calcular Medidas <span><img src='./img/cal.png'></span></button>
+          onclick="suma();calgrasa();calcularPesos();calcularIMC();catchyMc();calpesoGrasa();calmasaMuscular(); calrmb();">Calcular Medidas <span><img src='./img/cal.png'></span></button>
     <button type="button" name="btnGuardar" class="btn btn-secondary background letter" 
         onclick="javascript: grabar('medidas');">Guardar datos <span><img src='./img/save.png'></span></button>  
   </div>
