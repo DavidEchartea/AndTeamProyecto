@@ -210,7 +210,7 @@
 
   <div class="d-flex justify-content-center align-items-center container">
     <button type="button" name="btnCalculos" class="btn btn-secondary background letter" 
-          onclick="suma();calcularPesos();calcularIMC();catchyMc();">Calcular Medidas <span><img src='./img/cal.png'></span></button>
+          onclick="suma();calcularPesos();calcularIMC();catchyMc(); Woomer();">Calcular Medidas <span><img src='./img/cal.png'></span></button>
     <button type="button" name="btnGuardar" class="btn btn-secondary background letter" 
         onclick="javascript: grabar('medidas');">Guardar datos <span><img src='./img/save.png'></span></button>  
         <button type="button" name="btnCalculoGrasa" class="btn btn-secondary background letter" 
@@ -351,4 +351,5 @@
 </body>
 <script type='text/javascript' src='./js/funciones.js'></script>
 <script src='./js/calculos.js'></script>
+<script src='./js/metodoWomersly.js'></script>
 </html>
