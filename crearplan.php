@@ -199,7 +199,7 @@
   
   <div class='my-3 d-flex justify-content-center'>
     <div class='input-group-text'>Catch & McCarthy: </div>      
-    <input type="text" class="col-sm-2" id="txtCatch" name="txtCatch" placeholder="Catch & McCarthy" disabled>
+    <input type="text" class="col-sm-2" id="txtCatch" name="txtCatch" placeholder="Catch & McCarthy" disabled maxlength="6">
 
     <div class='input-group-text'>Woomersly: </div>
     <input type="text" class="col-sm-2" id="txtWoomer"name="txtWoomer" placeholder="Woomersly" disabled>
@@ -210,9 +210,11 @@
 
   <div class="d-flex justify-content-center align-items-center container">
     <button type="button" name="btnCalculos" class="btn btn-secondary background letter" 
-          onclick="suma();calgrasa();calcularPesos();calcularIMC();catchyMc();calpesoGrasa();calmasaMuscular(); calrmb();">Calcular Medidas <span><img src='./img/cal.png'></span></button>
+          onclick="suma();calcularPesos();calcularIMC();catchyMc();">Calcular Medidas <span><img src='./img/cal.png'></span></button>
     <button type="button" name="btnGuardar" class="btn btn-secondary background letter" 
         onclick="javascript: grabar('medidas');">Guardar datos <span><img src='./img/save.png'></span></button>  
+        <button type="button" name="btnCalculoGrasa" class="btn btn-secondary background letter" 
+          onclick="calpesoGrasa();calmasaMuscular();calrmb();">Calcular Grasa <span><img src='./img/cal.png'></span></button>
   </div>
 
   <div class="my-3">
