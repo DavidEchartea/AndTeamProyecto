@@ -9,44 +9,8 @@
   <script src="../js/bootstrap.min.js"></script>
 
   <link rel="icon" href="../img/muscle.png" type="image/png">
-	<style type="text/css">
-	.my-custom-scrollbar {
-    position: relative;
-    height: 200px;
-    overflow: auto;
-  }
-  .table-wrapper-scroll-y {
-    display: block;
-  }
- 
-  sticky-footer{
-  flex-shrink: none;
-  }
-  .card > .card-header {
-  background: #333436; color: #F4F5F6; }
-  .container-fluid{
-    background: #949494
-  }
-  .navbar-dark .navbar-nav .nav-link{
-    color: rgb(158,84,84);
-  }
-  .background{
-    background-color: #9e5454;
-  }
-  .letter{
-    color: #ffffff;
-  }
-  .img-container {
-        text-align: center;
-        background-color:#313534;
-  }
-  label {
-  display: inline-block;
-  width: 140px;
-  text-align: right;
-}​
-}
-	</style>
+  <link rel="stylesheet" type="text/css" href="../css/estilos.css">
+  <link href="https://www.flaticon.es/autores/freepik" title="Freepik">
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -69,6 +33,7 @@
   <div class="card text-center">
     <div class="card-header">
       Entrenamiento Mode Beast
+      <span><img src="../img/quemar.png"></span>
     </div>
   </div>
   <form id='frmEntrenamiento' action='./qryEntrenamiento.php' method="POST">
@@ -171,14 +136,14 @@
 
   <div class="card text-center">
     <div class="card-header">
-    <button type="button" class="btn btn-secondary  float-left background letter" href="../menu.html">Volver al menu</button>
-    <button type="button" class="btn btn-secondary  float-center background letter" href="#">Guardar</button>
+    <button type="button" class="btn btn-secondary  float-left background letter" href="../menu.html"><span><img src='../img/return.png'></span> Volver al menu</button>
+    <button type="button" class="btn btn-secondary  float-center background letter" href="#">Guardar <span><img src='../img/save.png'></span></button>
     </div>
     </div>
 
 <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
     <div class="container text-center">
-      <small>Attitude Nutrition Discipline Team</small>
+      <a>Attitude Nutrition Discipline Team</a>
     </div>
   </footer>
 

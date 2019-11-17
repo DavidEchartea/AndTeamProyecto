@@ -9,39 +9,7 @@
   <script src="../js/bootstrap.min.js"></script>
   
   <link rel="icon" href="../img/muscle.png" type="image/png">
-	<style type="text/css">
-	.my-custom-scrollbar {
-    position: relative;
-    height: 200px;
-    overflow: auto;
-  }
-  .table-wrapper-scroll-y {
-    display: block;
-  }
- 
-  sticky-footer{
-  flex-shrink: none;
-  }
-  .card > .card-header {
-  background: #333436; color: #F4F5F6; }
-  .container-fluid{
-    background: #949494
-  }
-  .navbar-dark .navbar-nav .nav-link{
-    color: rgb(158,84,84);
-  }
-  .background{
-    background-color: #9e5454;
-  }
-  .letter{
-    color: #ffffff;
-  }
-  .img-container {
-        text-align: center;
-        background-color:#313534;
-  }
-}
-	</style>
+  <link rel="stylesheet" type="text/css" href="../css/estilos.css">
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -63,60 +31,86 @@
   </div>
   <div class="card text-center">
     <div class="card-header">
-      Historial 
+      Historial
+      <span><img src="../img/historial.png"></span>
     </div>
   </div>
   <form id='frmExpediente' action='./qryExpediente.php' method="POST">
 
-  <div class="container-fluid">
-
-  <div class="row">
-    <div class="col">
+<div class="container-fluid" id="divcont">
+  <div class="d-flex justify-content-center align-items-center container">
+   <div class="input-group">
+    <input type="text" class="form-control" placeholder="Buscar...">
+    <div class="input-group-append">
+      <button class="btn btn-secondary" type="button"> <span> <img src="../img/lupa.png"></span>
+      </button>
     </div>
-    <div class="col">
-       <input type='text' id="txtBusqueda"class="form-control" name="txtBusqueda" placeholder="Cliente a buscar">
-    </div>
-
-    <div class="col">
-    <button type="button" name="btnBuscar" class="btn btn-secondary background letter" onclick="javascript: grabar('cliente')"> Buscar </button>
-    </div>
-    </div>
-
-  <div class="row">
-    <div class="col">
-      <div class="form-group">
-        <input type='hidden' id="txtOpc"class="form-control" name="txtOpc" placeholder="id">
-      </div>
-      <div class="form-group">
-        <input type="text" id="txtNombreExp" name="txtNombreExp"class="form-control" placeholder="Nombre">
-      </div>
-      <div class="form-group">
-      <input type="text" id="pesoNet" name="pesoNet"class="form-control" placeholder="Peso neto">
-      </div>
-      <div class="form-group">
-      <input type="text" id="porcentajeGrasa" name="porcentajeGrasa"class="form-control" placeholder="Porcentaje en grasa">
-      </div>
-      <div class="form-group">
-      <input type="text" id="porcentajeMasa" name="porcentajeMasa"class="form-control" placeholder="Porcentaje en masa">
-      </div>
-    </div>
-
-    <div class="col"> <!--columna de grfica-->
-      <button> Muestra grafica</button>
-    </div>
-
-    </div> <!--ROW-->
   </div>
+  </div>
+
+  <div class='d-flex justify-content-center align-items-center container'> <!--DIV FORM-->
+  
+    <div class='col'> <!--DIV COL--> 
+      <div class='form-group'>
+        <input type='hidden'class='form-control'>
+      </div>
+      <div class='form-group'>
+        <label>Nombre(s):</label>
+        <input type='text' class='form-control' name='txtNombre' id='txtNombre'>
+      </div>
+
+      <div class='form-group'>
+        <label>Peso neto:</label>
+        <input type='text' class='form-control' name='txtpesoNeto' id='txtpesoNeto'>
+      </div>
+
+      <div class='form-group'>
+        <label>Porcentaje grasa:</label>
+        <input type='text' class='form-control' name='txtporGrasa' id='txtporGrasa'>
+      </div>
+
+      <div class='form-group'>
+        <label>Porcentaje en masa:</label>
+        <input type='text' class='form-control' name='txtporMasa' id='txtporMasa'>
+      </div>
+    </div> <!--DIV COL--> 
+  </div> <!--DIV FORM-->
+
+<div id="grafica">
   <div class="card text-center">
     <div class="card-header">
-    <button type="button" class="btn btn-secondary  float-center background letter" href="./menu.html">Volver al menu</button>
+      Grafica 
+      <span><img src="../img/grafica.png"></span>
     </div>
-    </div>
+  </div>
+
+  <div class='d-flex justify-content-center align-items-center container'>
+    <button class="btn btn-secondary">Mostrar Grafica</button>
+  </div>
+
+</div>
+
+</div>
+<div class="card text-center">
+  <div class="card-header">
+  <button type="button" class="btn btn-secondary  float-center background letter" href="./menu.html"><span><img src='../img/return.png'></span> Volver al menu</button>
+  </div>
+</div>
 <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
     <div class="container text-center">
-      <small>Attitude Nutrition Discipline Team</small>
+      <a>Attitude Nutrition Discipline Team</a>
     </div>
   </footer>
 
 </body>
+<script type='text/javascript'>
+
+$(document).ready(function(){
+
+      var height = $(window).height();
+
+      $('#divcont').height(height);
+});
+
+</script>
 </html>

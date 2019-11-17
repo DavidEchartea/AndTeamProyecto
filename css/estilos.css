@@ -1,0 +1,42 @@
+.my-custom-scrollbar {
+    position: relative;
+    height: 250px;
+    overflow: auto;
+  }
+.table-wrapper-scroll-y {
+  display: block;
+}
+
+.card > .card-header {
+background: #333436; color: #F4F5F6; }
+.container-fluid{
+  background: #ffffff
+}
+
+.navbar-dark .navbar-nav .nav-link{
+  color: rgb(158,84,84);
+}
+
+.btn-secondary {
+  color: #fff;
+  background-color: #9e5454;
+  border-color: #9e5454;
+}
+.btn-secondary:hover{
+  color: #fff;
+  background-color: #874848;
+  border-color: #874848;
+}
+
+.img-container{
+  text-align: center;
+  background-color:#313534;
+}
+label:after{
+ content: " "
+}
+textarea{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
