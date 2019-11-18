@@ -37,9 +37,9 @@ var sexo = document.getElementById('sexo').value;
 var fila = getFila(pliegues,edad,sexo);
 var columna = getColumna(sexo, edad);
 if ((typeof fila === 'undefined')){
-   alert("Se uso regla de 3 simple");
+   //alert("Se uso regla de 3 simple");
 }else{
-  alert("Se uso el arreglo")
+  //alert("Se uso el arreglo")
   var grasa = datosH[fila][columna];
   document.getElementById('txtWoomer').value = grasa;
 }

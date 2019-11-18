@@ -1,25 +1,13 @@
 <?php
   session_start();
 
-  if(!isset($_SESSION['idControl']))
-  {
-    $_SESSION['idControl'] = uniqid();
-  }
+  if(!isset($_SESSION['idControl'])){
+    $_SESSION['idControl'] = uniqid(); }
 
-  if (empty($_SESSION['usr']))
-  {
+  if (empty($_SESSION['usr'])){
     echo "Debe autentificarse!";
-    exit();
-  }
+    exit(); }
   include './bd/conexion.php';
-  $qryC='SELECT concat(nombre_paciente," ",apellido_pat," ",apellido_mat) AS nombre_paciente,idPaciente FROM paciente order by nombre_paciente ASC';
-  $tablaBD= mysqli_query($link,$qryC);
-  $qryProte='SELECT nombre_nutri, idNutri FROM proteinas order by nombre_nutri ASC';
-  $qryCarbs='SELECT `nombre_carbs`, idCarbos FROM `carbos` ORDER BY nombre_carbs ASC';
-  $qryGrasas='SELECT nombre_grasa , idGrasa FROM grasas ORDER by nombre_grasa ASC';
-  $tablaProte = mysqli_query($link,$qryProte);
-  $tablaCarbs = mysqli_query($link,$qryCarbs);
-  $tablaGrasas= mysqli_query($link,$qryGrasas);
   ?>
 <!DOCTYPE html>
 <html>
@@ -38,14 +26,10 @@
   <link rel="icon" href="./img/muscle.png" type="image/png">
 	<script src="./main.js"></script>
   <script type="text/javascript">
-  
-
     $(document).ready(function() {
-
       function alerta(mensaje){
         alert(mensaje);
       }
-
       var metricas = function(id){
       //alert(id);
       return  $.getJSON("datosplan.php",{"id": id});
@@ -75,12 +59,7 @@
         metricas2(this.value)
         .done(function(response){
             if(!response.success){
-             // $('#tablaAjax').load('./HtmlAjax.php');
-             //$('#txtComida1').val(response.data.comidaJson);
-              /*$('#txtComida1').val(response.data.comidaId);
-              $('#txtComida1').val(response.data.comidaProte);
-              $('#txtComida1').val(response.data.comidaCarbs);
-              $('#txtComida1').val(response.data.comidaGrasa);*/
+             
             }
           }).fail(function(jqXHR, textStatus, errorThrown){alert(textStatus);});
           $('#tablaAjax').load('./HtmlAjax.php');
@@ -119,6 +98,8 @@
           <select id="cmb_plan" name="cmb_plan"  class="form-control">
             <option selected value="0">Elige un cliente</option>
             <?php  
+              $qryC='SELECT concat(nombre_paciente," ",apellido_pat," ",apellido_mat) AS nombre_paciente,idPaciente FROM paciente order by nombre_paciente ASC';
+              $tablaBD= mysqli_query($link,$qryC);
               while ($registro = mysqli_fetch_array($tablaBD)) {
               echo "<option value='".$registro['idPaciente']."' >";  
               echo $registro['nombre_paciente'];
@@ -214,9 +195,11 @@
   <select class="custom-select" id="cmb_prote" name="cmb_prote">
     <option selected>Elige una opcion</option>
       <?php  
+        $qryProte='SELECT nombre_nutrimento, id_nutri FROM tabla_nutrimentos where tipo = 1 order by nombre_nutrimento ASC';
+        $tablaProte = mysqli_query($link,$qryProte);
         while ($registro = mysqli_fetch_array($tablaProte)) {
-        $idNutri = $registro['idNutri'];
-        $nombre_nutri = $registro['nombre_nutri'];
+        $idNutri = $registro['id_nutri'];
+        $nombre_nutri = $registro['nombre_nutrimento'];
         echo "<option value='$idNutri'>$nombre_nutri</option>";
   }
       ?>
@@ -224,13 +207,16 @@
   <div class="input-group-prepend">
     <label class="input-group-text" for="inputGroupSelect01">Carbohidratos</label>
   </div>
-      <select class="custom-select" id="cmb_carbs">
-        <option selected>Elige una opcion</option>
-          <?php  
-            while ($registro = mysqli_fetch_array($tablaCarbs)) {
-            $nombre_carbs = $registro['nombre_carbs'];
-            echo "<option value='$nombre_carbs'>$nombre_carbs</option>";
-            }
+    <select class="custom-select" id="cmb_carbs">
+      <option selected>Elige una opcion</option>
+        <?php  
+          $qryCarbs='SELECT nombre_nutrimento, id_nutri FROM tabla_nutrimentos where tipo = 2 order by nombre_nutrimento ASC';
+          $tablaCarbs = mysqli_query($link,$qryCarbs);
+          while ($registro = mysqli_fetch_array($tablaCarbs)) {
+          $idNutriC = $registro['id_nutri'];
+          $nombre_carbs = $registro['nombre_nutrimento'];
+          echo "<option value='$idNutriC'>$nombre_carbs</option>";
+        }
           ?>
       </select>
   <div class="input-group-prepend">
@@ -238,18 +224,21 @@
   </div>
   <select class="custom-select" id="cmb_grasas">
     <option selected>Elige una opcion</option>
-            <?php  
-              while ($registro = mysqli_fetch_array($tablaGrasas)) {
-              $nombre_grasa = $registro['nombre_grasa'];
-              echo "<option value='$nombre_grasa'>$nombre_grasa</option>";
-              }
-            ?>
+      <?php  
+        $qryGrasas='SELECT nombre_nutrimento, id_nutri FROM tabla_nutrimentos where tipo = 3 order by nombre_nutrimento ASC';
+        $tablaGrasas= mysqli_query($link,$qryGrasas);
+        while ($registro = mysqli_fetch_array($tablaGrasas)) {
+        $idNutriG = $registro['id_nutri'];
+        $nombre_grasa = $registro['nombre_nutrimento'];
+        echo "<option value='$idNutriG'>$nombre_grasa</option>";
+        }
+      ?>
   </select>
 
   </div>
   </div>
   <div class="d-flex align-items-center justify-content-center">
-    <button class="btn btn-secondary">AHHHHH</button>
+    <button class="btn btn-secondary">Guardar Dieta</button>
   </div>
   <div class="d-flex align-items-center justify-content-center" id="tablaAjax">
     

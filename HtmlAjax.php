@@ -1,13 +1,9 @@
 <?php
-
   session_start();
   $idControl =  $_SESSION['idControl'];
-
    include './bd/conexion.php';
 ?>
-
 <div class="d-flex align-items-center justify-content-center">
-  
   <table class="table table-striped table-dark" id="tablaAjax">
   <thead>
     <tr>
@@ -18,9 +14,8 @@
     </tr>
   </thead>
   <?php
-    
-    $qry = "SELECT idNutri, nombre_nutri, proteinas, carbohidratos, grasas 
-            FROM proteinas INNER JOIN dietatemp on idNutrimento = idNutri where idControl = '".$idControl."'";
+    $qry = "SELECT id_nutri, nombre_nutrimento, proteinas, carbohidratos, grasas 
+            FROM tabla_nutrimentos INNER JOIN dietatemp on idNutrimento = id_nutri where idControl = '".$idControl."'";
     $result= mysqli_query($link,$qry);
     while ($ver = mysqli_fetch_row($result)) {
   ?>
@@ -32,7 +27,6 @@
   </tr>
   <?php 
     }
-  
-   ?>
+  ?>
 </table>
 </div>
