@@ -60,28 +60,7 @@ session_start();
   <script src='../js/bootstrap.min.js' ></script>
 
   <link rel='icon' href='../img/muscle.png' type='image/png'>
-    <style type='text/css'>
-    .img-container
-    {
-      text-align: center;
-      background-color:#313534;
-    } 
-
-    .card > .card-header
-    {
-      background: #333436; color: #F4F5F6; 
-    }
-    .background
-    {
-      background-color: #9e5454;
-    }
-    .letter
-    {
-      color: #ffffff;
-    }
-    
-
-    </style>
+  <link rel='stylesheet' type='text/css' href='../css/estilos.css'>
   </head>
   <body>
   <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
@@ -110,14 +89,14 @@ session_start();
       </div>
     <form  name='frmUpdPaciente' id='frmUpdPaciente' action='./qryclientes.php' method='POST'>
 
-<div class='container-fluid'> <!--CONTAINER--> 
+<div class='container-fluid' id='divcont'> <!--CONTAINER--> 
 
-  <div class='d-flex justify-content-center align-items-center container '> <!--DIV FORM-->
+  <div class='d-flex justify-content-center align-items-center container'> <!--DIV FORM-->
   
     <div class='col'> <!--DIV COL--> 
 
       <div class='form-group'>
-        <input type='hidden' id='txtOpc'class='form-control' name='txtOpc' placeholder='id'>
+        <input type='hidden' id='txtOpc'class='form-control' name='txtOpc'>
       </div>
 
       <div class='form-group'>
@@ -179,8 +158,8 @@ session_start();
       <input type='hidden' name='txtOpc' id='txtOpc'>
       <input type='hidden' name='txtId' id='txtId'>
 
-      <button type='button' id='btnGuardar' name='btnGuardar' class='btn btn-secondary float-center background letter' onClick='enviar(\"upd\")'> Guardar Cambios <span><img src='../img/save.png'></span></button>
-      <button type='button' class='btn btn-secondary  float-center background letter' onClick='enviar(\"regresar\")'><span><img src='../img/return.png'></span> Volver al menu</button>
+      <button type='button' id='btnGuardar' name='btnGuardar' class='btn btn-secondary float-center' onClick='enviar(\"upd\")'> Guardar Cambios <span><img src='../img/save.png'></span></button>
+      <button type='button' class='btn btn-secondary  float-center' onClick='enviar(\"regresar\")'><span><img src='../img/return.png'></span> Volver al menu</button>
     </div>
   </div> <!--DIV BOTONES-->
   
@@ -191,6 +170,16 @@ session_start();
   </footer>
   </body>
   <script type='text/javascript' src='http://services.iperfect.net/js/IP_generalLib.js'></script>
+  <script type='text/javascript'>
+
+$(document).ready(function(){
+
+      var height = $(window).height();
+
+      $('#divcont').height(height);
+});
+
+</script>
   </html>
   ";
   ?>

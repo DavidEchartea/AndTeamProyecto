@@ -20,47 +20,8 @@
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <script src="../js/jquery-3.4.1.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
-
   <link rel="icon" href="../img/muscle.png" type="image/png">
-  <style type="text/css">
-  .my-custom-scrollbar {
-    position: relative;
-    height: 250px;
-    overflow: auto;
-  }
-  .table-wrapper-scroll-y {
-    display: block;
-  }
- 
-  sticky-footer{
-  flex-shrink: none;
-  }
-
-  .card > .card-header {
-  background: #333436; color: #F4F5F6; }
-  .container-fluid{
-    background: #ffffff
-  }
-
-  .navbar-dark .navbar-nav .nav-link{
-    color: rgb(158,84,84);
-  }
-
-  .background{
-    background-color: #9e5454;
-  }
-
-  .letter{
-    color: #ffffff;
-  }
-
-  .img-container {
-        text-align: center;
-        background-color:#313534;
-  }
-
-  </style>
-
+  <link rel="stylesheet" type="text/css" href="../css/estilos.css">
 </head>
 <body>
 
@@ -198,45 +159,7 @@
   <script src='../js/jquery-3.4.1.min.js'></script>
   <script src='../js/bootstrap.min.js'></script>
   <link rel='icon' href='../img/muscle.png' type='image/png'>
-  <style type'text/css'>
-  .my-custom-scrollbar {
-    position: relative;
-    height: 250px;
-    overflow: auto;
-  }
-  .table-wrapper-scroll-y {
-    display: block;
-  }
- 
-  sticky-footer{
-  flex-shrink: none;
-  }
-
-  .card > .card-header {
-  background: #333436; color: #F4F5F6; }
-  .container-fluid{
-    background: #ffffff
-  }
-
-  .navbar-dark .navbar-nav .nav-link{
-    color: rgb(158,84,84);
-  }
-
-  .background{
-    background-color: #9e5454;
-  }
-
-  .letter{
-    color: #ffffff;
-  }
-
-  .img-container {
-        text-align: center;
-        background-color:#313534;
-  }
-
-  </style>
-
+  <link rel='stylesheet' type='text/css' href='../css/estilos.css'>
 </head>
 <body>
 
@@ -348,8 +271,8 @@
     </div><!--Container-->
     <div class="card text-center">
       <div class="card-header">
-      <button type="button" name="btnAgregar" class="btn btn-secondary  background letter" onclick="javascript: grabar('clientes')">Agregar  <span><img src="../img/plus-symbol.png"></span></button>
-      <button type="button" class="btn btn-secondary  float-left background letter" href="../menu.html"><span><img src="../img/return.png"></span> Volver al menu</button>
+      <button type="button" name="btnAgregar" class="btn btn-secondary" onclick="javascript: grabar('clientes')">Agregar  <span><img src="../img/plus-symbol.png"></span></button>
+      <button type="button" class="btn btn-secondary  float-left" href="../menu.html"><span><img src="../img/return.png"></span> Volver al menu</button>
       </div>
     </div>
   </form>

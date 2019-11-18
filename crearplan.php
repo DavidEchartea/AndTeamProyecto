@@ -33,6 +33,7 @@
 
   <link rel="stylesheet" href="./estilos.css">
 	<link rel="stylesheet" href="./font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="./css/estilos.css">
 
   <link rel="icon" href="./img/muscle.png" type="image/png">
 	<script src="./main.js"></script>
@@ -87,25 +88,6 @@
     });
       //ready
   </script>
-
-	<style type="text/css">
-  .navbar-dark .navbar-nav .nav-link{color: rgb(158,84,84); }
-  .img-container {text-align: center;background-color:#313534;}
-  .card > .card-header {background: #333436;color: #F4F5F6; }
-  .background{background-color: #9e5454;}
-  .letter{color: #ffffff;}
-  .label{font-size: 15px;float: left;}
-  label:after { content: " " }
-  textarea {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-  .thead{
-    background-color: #9e5454;
-  }
-
-	</style>
 </head>
 <body>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -216,11 +198,11 @@
 	</div>
 
   <div class="d-flex justify-content-center align-items-center container">
-    <button type="button" name="btnCalculos" class="btn btn-secondary background letter" 
+    <button type="button" name="btnCalculos" class="btn btn-secondary" 
           onclick="suma();calcularPesos();calcularIMC();catchyMc(); Woomer();">Calcular Medidas <span><img src='./img/cal.png'></span></button>
-    <button type="button" name="btnGuardar" class="btn btn-secondary background letter" 
+    <button type="button" name="btnGuardar" class="btn btn-secondary" 
         onclick="javascript: grabar('medidas');">Guardar datos <span><img src='./img/save.png'></span></button>  
-        <button type="button" name="btnCalculoGrasa" class="btn btn-secondary background letter" 
+        <button type="button" name="btnCalculoGrasa" class="btn btn-secondary" 
           onclick="calpesoGrasa();calmasaMuscular();calrmb();">Calcular Grasa <span><img src='./img/cal.png'></span></button>
   </div>
 
@@ -267,7 +249,7 @@
   </div>
   </div>
   <div class="d-flex align-items-center justify-content-center">
-    <button class="btn btn-secondary background letter">AHHHHH</button>
+    <button class="btn btn-secondary">AHHHHH</button>
   </div>
   <div class="d-flex align-items-center justify-content-center" id="tablaAjax">
     
@@ -329,9 +311,9 @@
     </div>
   </div>
   <div class="my-3 d-flex justify-content-center align-items-center">
-    <button type="button" class="btn btn-secondary background letter">Generar PDF <span><img src="./img/pdf.png"></span></button>
-    <button type="button" class="btn btn-secondary background letter">Agregar entrenamiento</button>
-    <button type="button" class="btn btn-secondary background letter">Agregar menu</button>
+    <button type="button" class="btn btn-secondary">Generar PDF <span><img src="./img/pdf.png"></span></button>
+    <button type="button" class="btn btn-secondary">Agregar entrenamiento</button>
+    <button type="button" class="btn btn-secondary">Agregar menu</button>
   </div>
 
   <div class="my-2">
@@ -352,7 +334,7 @@
 </form>
 <footer class="py-4 bg-dark text-white-50 sticky-footer">
     <div class="container text-center">
-      <small>Attitude Nutrition Discipline Team</small>
+      <a>Attitude Nutrition Discipline Team</a>
     </div>
     </footer>
 </body>
