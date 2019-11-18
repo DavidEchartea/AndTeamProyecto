@@ -1,5 +1,11 @@
 <?php
   session_start();
+
+  if(!isset($_SESSION['idControl']))
+  {
+    $_SESSION['idControl'] = uniqid();
+  }
+
   if (empty($_SESSION['usr']))
   {
     echo "Debe autentificarse!";
@@ -67,15 +73,16 @@
       $('#cmb_prote').on('change',function() {
         metricas2(this.value)
         .done(function(response){
-            if(response.success){
-              $('#tablaAjax').load('./HtmlAjax.php');
-              $('#txtComida1').val(response.data.comidaJson);
+            if(!response.success){
+             // $('#tablaAjax').load('./HtmlAjax.php');
+             //$('#txtComida1').val(response.data.comidaJson);
               /*$('#txtComida1').val(response.data.comidaId);
               $('#txtComida1').val(response.data.comidaProte);
               $('#txtComida1').val(response.data.comidaCarbs);
               $('#txtComida1').val(response.data.comidaGrasa);*/
             }
           }).fail(function(jqXHR, textStatus, errorThrown){alert(textStatus);});
+          $('#tablaAjax').load('./HtmlAjax.php');
       });
     });
       //ready

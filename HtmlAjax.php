@@ -1,4 +1,8 @@
 <?php
+
+  session_start();
+  $idControl =  $_SESSION['idControl'];
+
    include './bd/conexion.php';
 ?>
 
@@ -15,8 +19,8 @@
   </thead>
   <?php
     
-    $qry = 'SELECT idNutri, nombre_nutri, proteinas, carbohidratos, grasas 
-            FROM proteinas ';
+    $qry = "SELECT idNutri, nombre_nutri, proteinas, carbohidratos, grasas 
+            FROM proteinas INNER JOIN dietatemp on idNutrimento = idNutri where idControl = '".$idControl."'";
     $result= mysqli_query($link,$qry);
     while ($ver = mysqli_fetch_row($result)) {
   ?>
