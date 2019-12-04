@@ -93,7 +93,7 @@
 </div>
 <div class="card text-center">
   <div class="card-header">
-  <button type="button" class="btn btn-secondary  float-center background letter" href="./menu.html"><span><img src='../img/return.png'></span> Volver al menu</button>
+  <a class="btn btn-secondary  float-center background letter" href="../menu.html"><span><img src='../img/return.png'></span> Volver al menu</a>
   </div>
 </div>
 <footer id="sticky-footer" class="py-4 bg-dark text-white-50">

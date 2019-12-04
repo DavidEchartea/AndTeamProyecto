@@ -272,7 +272,7 @@
     <div class="card text-center">
       <div class="card-header">
       <button type="button" name="btnAgregar" class="btn btn-secondary" onclick="javascript: grabar('clientes')">Agregar  <span><img src="../img/plus-symbol.png"></span></button>
-      <button type="button" class="btn btn-secondary  float-left" href="../menu.html"><span><img src="../img/return.png"></span> Volver al menu</button>
+      <a class="btn btn-secondary  float-left" href="../menu.html"><span><img src="../img/return.png"></span> Volver al menu</a>
       </div>
     </div>
   </form>

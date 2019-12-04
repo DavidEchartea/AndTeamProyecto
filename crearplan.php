@@ -300,7 +300,7 @@
     </div>
   </div>
   <div class="my-3 d-flex justify-content-center align-items-center">
-    <button type="button" class="btn btn-secondary">Generar PDF <span><img src="./img/pdf.png"></span></button>
+    <a href="./appPDF/index.php" class="btn btn-secondary">Generar PDF <span><img src="./img/pdf.png"></span></a>
     <button type="button" class="btn btn-secondary">Agregar entrenamiento</button>
     <button type="button" class="btn btn-secondary">Agregar menu</button>
   </div>
